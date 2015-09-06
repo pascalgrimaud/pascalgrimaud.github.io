@@ -41,14 +41,42 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Projet de<br/>Communauté Technique</h1>
-					<h2><a href="http://www.cat-amania.com" target="_blank">www.cat-amania.com</a></h2>
-					<a href="#" class="navigate-down">
+						<section>
+						<h1>Projet de<br/>Communauté Technique</h1>
+						<h3><a href="http://www.cat-amania.com" target="_blank">www.cat-amania.com</a></h3>
+						<a href="http://www.cat-amania.com" target="_blank">
 							<img height="120px" src="./images/logocatsign.jpg" alt="logo_catamania">
 						</a>
-					<p>
-						<small>Créé par <a href="">Pascal GRIMAUD</a></small>
-					</p>
+						<p>
+							<small>Créé par <a href="">Pascal GRIMAUD</a></small>
+						</p>
+					</section>
+					<section id="transitions">
+						<h2>Transition Styles</h2>
+						<p>
+							<a href="?transition=none#/transitions">None</a> -
+							<a href="?transition=fade#/transitions">Fade</a> -
+							<a href="?transition=slide#/transitions">Slide</a> -
+							<a href="?transition=convex#/transitions">Convex</a> -
+							<a href="?transition=concave#/transitions">Concave</a> -
+							<a href="?transition=zoom#/transitions">Zoom</a>
+						</p>
+						<h2>Themes</h2>
+						<p>
+							<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
+							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
+							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
+							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
+							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
+							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
+							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
+							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
+							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
+							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
+							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
+						</p>
+					</section>
 				</section>
 
 				<section>
@@ -61,7 +89,7 @@
 						<p><img width="350px" data-src="./images/logo_sogecap.png" alt="logo_sogecap"></p>
 					<br>
 						<a href="https://www.linkedin.com/in/pascalgrimaud" target="_blank">
-							<img height="48px" data-src="./images/square-linkedin-128.png" alt="linkelin_icone">
+							<img height="48px" data-src="./images/linkedin-logo.png" alt="linkelin_icone">
 						</a>
 						<a href="https://github.com/pascalgrimaud/" target="_blank" title="mon git_ub">
 							<img height="48px" data-src="./images/github.png" alt="git_icone">
@@ -316,12 +344,12 @@
 							<tbody>
 								<tr>
 									<td bgcolor="#4285f4"><img data-src="./images/logo-catamania.png" alt="?"></td>
-									<td bgcolor="#4E5257" rowspan="3"><img height="50%" data-src="./images/vs.png" alt="?"></td>
+									<td rowspan="3"><img height="50%" data-src="./images/vs.png" alt="?"></td>
 									<td bgcolor="#ff0000"><img data-src="./images/logo-catamania.png" alt="?"></td>
 								</tr>
 								<tr>
-								<td bgcolor="#4E5257"></td>
-								<td bgcolor="#4E5257"></td>
+									<td/>
+									<td/>
 								</tr>
 								<tr>
 									<td bgcolor="#009958"><img data-src="./images/logo-catamania.png" alt="?"></td>
@@ -374,7 +402,7 @@
 				</section>
 
 				<section>
-					<h2>Tout plein d'autres choses...</h2>
+					<h1>Tout plein<br/>d'autres choses...</h1>
 					<ul>
 						<li>A vous de faire vivre la communauté</li>
 						<li>D'avoir des idées</li>
@@ -412,7 +440,7 @@
 				</section>
 
 				<section>
-					<h2>Règles</h2>
+					<h1>Quelques règles</h1>
 					<ul>
 						<li>Aucun engagement</li>
 						<li>Aucune obligation</li>
@@ -427,7 +455,7 @@
 				</section>
 				
 				<section>
-					<h2>MERCI de votre attention</h2>
+					<h1><small>Merci de votre attention</small></h1>
 					<img width="30%" height="30%" data-src="./images/to_be_continued.png" alt="to_be_continued">
 					<p>
 						<small><a href="https://github.com/hakimel/reveal.js" target="_blank">Reveal.js </a> - The HTML Presentation Framework</small>
