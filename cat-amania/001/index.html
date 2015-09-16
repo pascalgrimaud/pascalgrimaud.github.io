@@ -1,497 +1,558 @@
- <!doctype html>
+<!doctype html>
 <html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Cat-Amania - Projet de Communauté Technique</title>
+    <meta name="description" content="Cat-Amania - Projet de Communauté Technique">
+    <meta name="author" content="Pascal Grimaud">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/league.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <section>
+                <h1>Projet de<br/>Communauté Technique</h1>
 
-	<head>
-		<meta charset="utf-8">
+                <h3><a href="http://www.cat-amania.com" target="_blank">www.cat-amania.com</a></h3>
+                <a href="http://www.cat-amania.com" target="_blank">
+                    <img height="120px" src="./images/logocatsign.jpg" alt="logo_catamania">
+                </a>
 
-		<title>Cat-Amania - Projet de Communauté Technique</title>
+                <p>
+                    <small>Créé par <a href="">Pascal GRIMAUD</a></small>
+                </p>
+            </section>
+            <section id="transitions">
+                <h2>Transition Styles</h2>
+                <p>
+                    <a href="?transition=none#/transitions">None</a> -
+                    <a href="?transition=fade#/transitions">Fade</a> -
+                    <a href="?transition=slide#/transitions">Slide</a> -
+                    <a href="?transition=convex#/transitions">Convex</a> -
+                    <a href="?transition=concave#/transitions">Concave</a> -
+                    <a href="?transition=zoom#/transitions">Zoom</a>
+                </p>
+                <h2>Themes</h2>
+                <p>
+                    <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+                    <a href="#"
+                       onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black
+                        (default)</a> -
+                    <a href="#"
+                       onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a>
+                    -
+                    <a href="#"
+                       onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a>
+                    -
+                    <a href="#"
+                       onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a>
+                    -
+                    <a href="#"
+                       onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a>
+                    -
+                    <a href="#"
+                       onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a>
+                    <br>
+                    <a href="#"
+                       onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a>
+                    -
+                    <a href="#"
+                       onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a>
+                    -
+                    <a href="#"
+                       onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a>
+                    -
+                    <a href="#"
+                       onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a>
+                    -
+                    <a href="#"
+                       onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
+                </p>
+            </section>
+        </section>
 
-		<meta name="description" content="Cat-Amania - Projet de Communauté Technique">
-		<meta name="author" content="Pascal Grimaud">
+        <section>
+            <h2>Présentation personnelle</h2>
+            <p>Pascal GRIMAUD</p>
+            <p><a href="p.grimaud@cat-amania.com" target="_blank">p.grimaud@cat-amania.com</a></p>
+            <p>Consultant Java EE<br/>Depuis juin 2015 chez Cat-Amania pour</p>
+            <p><img width="350px" data-src="./images/logo_sogecap.png" alt="logo_sogecap"></p>
+            <br>
+            <a href="https://www.linkedin.com/in/pascalgrimaud" target="_blank">
+                <img height="48px" data-src="./images/linkedin-logo.png" alt="linkelin_icone">
+            </a>
+            <a href="https://github.com/pascalgrimaud/" target="_blank" title="mon git_ub">
+                <img height="48px" data-src="./images/github.png" alt="git_icone">
+            </a>
+        </section>
+        <section>
+            <table>
+                <thead>
+                <tr>
+                    <h2>Tour de table</h2>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>En moins de 30 secondes</li>
+                            <ul>
+                                <li type="circle">Nom, prénom</li>
+                                <li type="circle">Type de profil</li>
+                                <small>Technique, Fonctionnel, Commercial, Autre ?</small>
+                                <li type="circle">Pourquoi êtes-vous ici ?</li>
+                            </ul>
+                            <br/>
+                        </ul>
+                    </td>
+                    <td>
+                        <img data-src="./images/tour_de_table.png" alt="tour_table">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <table>
+                <thead>
+                <tr>
+                    <h2>Définition</h2>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Communauté</li>
+                            <ul>
+                                <li TYPE="circle">Noyau de personnes passionnées</li>
+                                <li TYPE="circle">Contributeurs</li>
+                                <li TYPE="circle">Public</li>
+                            </ul>
+                            <br/>
+                            <li>Technique</li>
+                            <ul>
+                                <li TYPE="circle">Pour parler des sujets techniques, mais pas que...</li>
+                            </ul>
+                        </ul>
+                    </td>
+                    <td>
+                        <img width="400px" data-src="./images/definition.png" alt="definition">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Qu'est ce qu'on y fait..?</h2>
+            <h3>...De la veille technologique !</h3>
+            <table>
+                <thead>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Objectifs</li>
+                            <ul>
+                                <li type="circle">Apprendre</li>
+                                <li type="circle">Se mettre à jour</li>
+                                <li type="circle">En groupe</li>
+                                <li type="circle">Idée de partage</li>
+                            </ul>
+                            <br/><br/>
+                        </ul>
+                    </td>
+                    <td>
+                        <img width="550px" data-src="./images/schema_veille2.png" alt="veille_techno">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <section>
+                <h1>Présentation</h1>
+            </section>
+            <section>
+                <h2>Principe</h2>
+                <ul>
+                    <li>Le consultant</li>
+                    <ul>
+                        <li type="circle">Travaille sur un sujet</li>
+                        <li type="circle">Prépare une présentation : PPT, Web</li>
+                        <li type="circle">Présente le sujet pendant 30min à 1h</li>
+                        <li type="circle">Fin de séance : apéro, buffet...</li>
+                    </ul>
+                    <br/>
+                    <li>Types de sujet</li>
+                    <ul>
+                        <li type="circle">Technique</li>
+                        <li type="circle">Fonctionnel</li>
+                    </ul>
+                </ul>
+            </section>
+            <section data-transition="slide" id="fragments">
+                <table>
+                    <thead>
+                    <tr>
+                        <h2>Devinettes</h2>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><img width="60px" height="60px" data-src="./images/01.jpg" alt="?"><br/>&nbsp;</td>
+                        <td><img width="60px" height="60px" data-src="./images/02.jpg" alt="?"><br/>&nbsp;</td>
+                        <td><img width="60px" height="60px" data-src="./images/03.jpg" alt="?"><br/>&nbsp;</td>
+                        <td><img width="60px" height="60px" data-src="./images/04.jpg" alt="?"><br/>&nbsp;</td>
+                        <td><img width="60px" height="60px" data-src="./images/05.jpg" alt="?"><br/>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><img width="60px" height="60px" data-src="./images/06.jpg" alt="?"><br/>&nbsp;</td>
+                        <td><img width="60px" height="60px" data-src="./images/07.jpg" alt="?"><br/>&nbsp;</td>
+                        <td><img width="60px" height="60px" data-src="./images/08.jpg" alt="?"><br/>&nbsp;</td>
+                        <td><img width="60px" height="60px" data-src="./images/09.jpg" alt="?"><br/>&nbsp;</td>
+                        <td><img width="60px" height="60px" data-src="./images/10.jpg" alt="?"><br/>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><img width="60px" height="60px" data-src="./images/11.jpg" alt="?"><br/>&nbsp;</td>
+                        <td><img width="60px" height="60px" data-src="./images/12.jpg" alt="?"><br/>&nbsp;</td>
+                        <td><img width="60px" height="60px" data-src="./images/13.jpg" alt="?"><br/>&nbsp;</td>
+                        <td><img width="60px" height="60px" data-src="./images/14.jpg" alt="?"><br/>&nbsp;</td>
+                        <td><img width="60px" height="60px" data-src="./images/15.jpg" alt="?"><br/>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><img width="60px" height="60px" data-src="./images/21.jpg" alt="?"><br/>&nbsp;</td>
+                        <td><img width="60px" height="60px" data-src="./images/17.jpg" alt="?"><br/>&nbsp;</td>
+                        <td><img width="60px" height="60px" data-src="./images/18.jpg" alt="?"><br/>&nbsp;</td>
+                        <td><img width="60px" height="60px" data-src="./images/19.jpg" alt="?"><br/>&nbsp;</td>
+                        <td><img width="60px" height="60px" data-src="./images/20.jpg" alt="?"><br/>&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <h2>Réponses</h2>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><img width="60px" height="60px" data-src="./images/01.jpg" alt="?"><br/>
+                            <small>Ubuntu</small>
+                        </td>
+                        <td><img width="60px" height="60px" data-src="./images/02.jpg" alt="?"><br/>
+                            <small>Docker</small>
+                        </td>
+                        <td><img width="60px" height="60px" data-src="./images/03.jpg" alt="?"><br/>
+                            <small>Elasticsearch</small>
+                        </td>
+                        <td><img width="60px" height="60px" data-src="./images/04.jpg" alt="?"><br/>
+                            <small>Java</small>
+                        </td>
+                        <td><img width="60px" height="60px" data-src="./images/05.jpg" alt="?"><br/>
+                            <small>Logstash</small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img width="60px" height="60px" data-src="./images/06.jpg" alt="?"><br/>
+                            <small>AngularJS</small>
+                        </td>
+                        <td><img width="60px" height="60px" data-src="./images/07.jpg" alt="?"><br/>
+                            <small>MongoDB</small>
+                        </td>
+                        <td><img width="60px" height="60px" data-src="./images/08.jpg" alt="?"><br/>
+                            <small>Git</small>
+                        </td>
+                        <td><img width="60px" height="60px" data-src="./images/09.jpg" alt="?"><br/>
+                            <small>Spring</small>
+                        </td>
+                        <td><img width="60px" height="60px" data-src="./images/10.jpg" alt="?"><br/>
+                            <small>JHipster</small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img width="60px" height="60px" data-src="./images/11.jpg" alt="?"><br/>
+                            <small>Bower</small>
+                        </td>
+                        <td><img width="60px" height="60px" data-src="./images/12.jpg" alt="?"><br/>
+                            <small>Jenkins</small>
+                        </td>
+                        <td><img width="60px" height="60px" data-src="./images/13.jpg" alt="?"><br/>
+                            <small>Scala</small>
+                        </td>
+                        <td><img width="60px" height="60px" data-src="./images/14.jpg" alt="?"><br/>
+                            <small>IntelliJ</small>
+                        </td>
+                        <td><img width="60px" height="60px" data-src="./images/15.jpg" alt="?"><br/>
+                            <small>Redis</small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img width="60px" height="60px" data-src="./images/21.jpg" alt="?"><br/>
+                            <small>Kibana</small>
+                        </td>
+                        <td><img width="60px" height="60px" data-src="./images/17.jpg" alt="?"><br/>
+                            <small>Grunt</small>
+                        </td>
+                        <td><img width="60px" height="60px" data-src="./images/18.jpg" alt="?"><br/>
+                            <small>ReactJS</small>
+                        </td>
+                        <td><img width="60px" height="60px" data-src="./images/19.jpg" alt="?"><br/>
+                            <small>Cassandra</small>
+                        </td>
+                        <td><img width="60px" height="60px" data-src="./images/20.jpg" alt="?"><br/>
+                            <small>Yeoman</small>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Travaux pratiques</h1>
+            </section>
+            <section>
+                <h2>Principe</h2>
+                <table>
+                    <tbody>
+                    <td>
+                        <ul>
+                            <li>Chacun ramène son PC</li>
+                            <li>Ou s'en fait prêter un...</li>
+                            <li>Ou en binôme...</li>
+                            <li>Puis on travaille ensemble</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <img width="200px" height="200px" data-src="./images/Laptop.png" alt="?">
+                    </td>
+                    </tbody>
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+                </table>
+            </section>
+            <section>
+                <h2>Pour tester</h2>
+                <ul>
+                    <li>Une technologie</li>
+                    <li>Un langage</li>
+                    <li>Un outil</li>
+                    <li>Un framework</li>
+                    <li>Une méthode</li>
+                    <li>Etc.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Un ou plusieurs animateurs</h2>
+                <ul>
+                    <li>Pour suivre la séance</li>
+                    <li>Pour aider et apporter des solutions</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Battle de code</h1>
+            </section>
+            <section>
+                <h2>Principe</h2>
+                <ul>
+                    <li>Un maximum de PC</li>
+                    <li>On forme plusieurs équipes</li>
+                    <li>On résout des problèmes</li>
+                    <br/>
+                </ul>
+                <br/>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#4285f4"><img data-src="./images/logo-catamania.png" alt="?"></td>
+                        <td rowspan="3"><img height="50%" data-src="./images/vs.png" alt="?"></td>
+                        <td bgcolor="#ff0000"><img data-src="./images/logo-catamania.png" alt="?"></td>
+                    </tr>
+                    <tr>
+                        <td/>
+                        <td/>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#009958"><img data-src="./images/logo-catamania.png" alt="?"></td>
+                        <td bgcolor="#febe0f"><img data-src="./images/logo-catamania.png" alt="?"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+        <section>
+            <h1>Slack <img height="15%" width="15%" data-src="./images/slack.png" alt="?"></h1>
+            <ul>
+                <li>Outil de communication</li>
+                <ul>
+                    <li type="circle"><a href="https://cat-amania.slack.com/signup" target="_blank">https://cat-amania.slack.com/signup</a>
+                    </li>
+                </ul>
+                <br/>
+                <li>Initialisé par : Nicolas MAUROY</li>
+                <br/>
+                <li>Utilisé pour</li>
+                <ul>
+                    <li type="circle">Communication entre projets, entre collaborateurs</li>
+                    <li type="circle">Permet le partage des ressources</li>
+                    <li type="circle">Forum d'entraide</li>
+                </ul>
+            </ul>
+        </section>
+        <section>
+            <table>
+                <td>
+                    <h1>GitHub</h1></td>
+                <td><img height="150" data-src="./images/Octocat.png" alt="?"></td>
+            </table>
+            <ul>
+                <li>Héberger les ressources publiques</li>
+                <ul>
+                    <li type="circle"><a href="https://github.com/cat-amania" target="_blank">https://github.com/cat-amania</a>
+                    </li>
+                </ul>
+                <br/>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+                <li>Initialisé par : Pascal GRIMAUD</li>
+                <br/>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/league.css" id="theme">
+                <li>Peut-être un jour...</li>
+                <ul>
+                    <li type="circle">Construire un projet open source</li>
+                    <li type="circle">Construire un blog technique</li>
+                </ul>
+            </ul>
+        </section>
+        <section>
+            <h1>Tout plein<br/>d'autres choses...</h1>
+            <ul>
+                <li>A vous de faire vivre la communauté</li>
+                <li>D'avoir des idées</li>
+                <li>Définir son cap</li>
+            </ul>
+        </section>
+        <section>
+            <section>
+                <h1>ORGANISATION</h1>
+                <img width="40%" height="40%" data-src="./images/planning.png" alt="planning">
+            </section>
+            <section>
+                <h2>Quand ?</h2>
+                <ul>
+                    <li>Mardi, mercredi ou jeudi</li>
+                    <li>Le soir à 19h ?</li>
+                    <li>Fin max à 21h ?</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Combien de temps ?</h2>
+                <ul>
+                    <li>Durée d'une présentation : 30min à 1h</li>
+                    <li>Durée de travaux pratiques : 1h à 2h</li>
+                    <li>Durée de battle de codes : 1h à 2h</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Fréquence ?</h2>
+                <ul>
+                    <li>L'idéal : 1 fois par mois</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <h1>Quelques règles</h1>
+            <ul>
+                <li>Aucun engagement</li>
+                <li>Aucune obligation</li>
+                <li>Aucune contrainte</li>
+                <li>Bonne humeur & motivation</li>
+            </ul>
+        </section>
+        <section>
+            <h1>Questions ?</h1>
+            <img data-src="./images/question.png" alt="?">
+        </section>
+        <section>
+            <h1>
+                <small>Merci de votre attention</small>
+            </h1>
+            <img width="30%" height="30%" data-src="./images/to_be_continued.png" alt="to_be_continued">
 
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+            <p>
+                <small><a href="https://github.com/hakimel/reveal.js" target="_blank">Reveal.js </a> - The HTML
+                    Presentation Framework
+                </small>
+            </p>
+        </section>
+    </div>
+</div>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+<script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-
-	<body>
-
-		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-						<section>
-						<h1>Projet de<br/>Communauté Technique</h1>
-						<h3><a href="http://www.cat-amania.com" target="_blank">www.cat-amania.com</a></h3>
-						<a href="http://www.cat-amania.com" target="_blank">
-							<img height="120px" src="./images/logocatsign.jpg" alt="logo_catamania">
-						</a>
-						<p>
-							<small>Créé par <a href="">Pascal GRIMAUD</a></small>
-						</p>
-					</section>
-					<section id="transitions">
-						<h2>Transition Styles</h2>
-						<p>
-							<a href="?transition=none#/transitions">None</a> -
-							<a href="?transition=fade#/transitions">Fade</a> -
-							<a href="?transition=slide#/transitions">Slide</a> -
-							<a href="?transition=convex#/transitions">Convex</a> -
-							<a href="?transition=concave#/transitions">Concave</a> -
-							<a href="?transition=zoom#/transitions">Zoom</a>
-						</p>
-						<h2>Themes</h2>
-						<p>
-							<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-							<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-						</p>
-					</section>
-				</section>
-
-				<section>
-
-					<h2>Présentation personnelle</h2>
-
-						<p>Pascal GRIMAUD</p>
-						<p><a href="p.grimaud@cat-amania.com" target="_blank">p.grimaud@cat-amania.com</a></p>
-						<p>Consultant Java EE<br/>Depuis juin 2015 chez Cat-Amania pour</p>
-						<p><img width="350px" data-src="./images/logo_sogecap.png" alt="logo_sogecap"></p>
-					<br>
-						<a href="https://www.linkedin.com/in/pascalgrimaud" target="_blank">
-							<img height="48px" data-src="./images/linkedin-logo.png" alt="linkelin_icone">
-						</a>
-						<a href="https://github.com/pascalgrimaud/" target="_blank" title="mon git_ub">
-							<img height="48px" data-src="./images/github.png" alt="git_icone">
-						</a>
-				</section>
-				<section>
-						<table>
-						<thead>
-							<tr>
-								<h2>Tour de table</h2>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-							<td>
-							<ul>
-								<li >En moins de 30 secondes</li>
-								<ul>
-									<li type="circle">Nom, prénom</li>
-									<li type="circle">Type de profil</li>
-									<small>Technique, Fonctionnel, Commercial, Autre ?</small>
-									<li type="circle">Pourquoi êtes-vous ici ?</li>
-								</ul>
-								<br/>
-							</ul>
-							</td>
-							<td>
-								<img data-src="./images/tour_de_table.png" alt="tour_table">
-							</td>
-							</tr>
-						</tbody>
-					</table>
-					</section>
-				<section>
-					<table>
-						<thead>
-							<tr>
-							<h2>Définition</h2>
-							</tr>
-								</thead>
-								<tbody>
-							<tr>
-							<td>
-								<ul>
-									<li>Communauté</li>
-									<ul>
-										<li TYPE="circle">Noyau de personnes passionnées</li>
-										<li TYPE="circle">Contributeurs</li>
-										<li TYPE="circle">Public</li>
-									</ul>
-									<br/>
-									<li>Technique</li>
-									<ul>
-										<li TYPE="circle">Pour parler des sujets techniques, mais pas que...</li>
-									</ul>
-								</ul>
-								</td>
-							<td>
-								<img width="400px" data-src="./images/definition.png" alt="definition">
-							</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-				<h2>Qu'est ce qu'on y fait..?</h2>
-				<h3>...De la veille technologique !</h3>
-					<table>
-						<thead>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<ul>
-										<li>Objectifs</li>
-										<ul>
-											<li type="circle">Apprendre</li>
-											<li type="circle">Se mettre à jour</li>
-											<li type="circle">En groupe</li>
-											<li type="circle">Idée de partage</li>
-										</ul>
-										<br/><br/>
-									</ul>
-								</td>
-								<td>
-									<img width="550px" data-src="./images/schema_veille2.png" alt="veille_techno">
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-				<section>
-					<section>
-						<h1>Présentation</h1>
-					</section>
-					<section>
-						<h2>Principe</h2>
-						<ul>
-							<li>Le consultant</li>
-							<ul>
-								<li type="circle">Travaille sur un sujet</li>
-								<li type="circle">Prépare une présentation : PPT, Web</li>
-								<li type="circle">Présente le sujet pendant 30min à 1h</li>
-								<li type="circle">Fin de séance : apéro, buffet...</li>
-							</ul>
-							<br/>
-							<li>Types de sujet</li>
-							<ul>
-								<li type="circle">Technique</li>
-								<li type="circle">Fonctionnel</li>
-							</ul>
-						</ul>
-					</section>
-					<section data-transition="slide" id="fragments">
-					<table>
-						<thead>
-							<tr>
-								<h2>Devinettes</h2>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><img width="60px" height="60px" data-src="./images/01.jpg" alt="?"><br/>&nbsp;</td>
-								<td><img width="60px" height="60px" data-src="./images/02.jpg" alt="?"><br/>&nbsp;</td>
-								<td><img width="60px" height="60px" data-src="./images/03.jpg" alt="?"><br/>&nbsp;</td>
-								<td><img width="60px" height="60px" data-src="./images/04.jpg" alt="?"><br/>&nbsp;</td>
-								<td><img width="60px" height="60px" data-src="./images/05.jpg" alt="?"><br/>&nbsp;</td>
-							</tr>
-							<tr>
-								<td><img width="60px" height="60px" data-src="./images/06.jpg" alt="?"><br/>&nbsp;</td>
-								<td><img width="60px" height="60px" data-src="./images/07.jpg" alt="?"><br/>&nbsp;</td>
-								<td><img width="60px" height="60px" data-src="./images/08.jpg" alt="?"><br/>&nbsp;</td>
-								<td><img width="60px" height="60px" data-src="./images/09.jpg" alt="?"><br/>&nbsp;</td>
-								<td><img width="60px" height="60px" data-src="./images/10.jpg" alt="?"><br/>&nbsp;</td>
-							</tr>
-							<tr>
-								<td><img width="60px" height="60px" data-src="./images/11.jpg" alt="?"><br/>&nbsp;</td>
-								<td><img width="60px" height="60px" data-src="./images/12.jpg" alt="?"><br/>&nbsp;</td>
-								<td><img width="60px" height="60px" data-src="./images/13.jpg" alt="?"><br/>&nbsp;</td>
-								<td><img width="60px" height="60px" data-src="./images/14.jpg" alt="?"><br/>&nbsp;</td>
-								<td><img width="60px" height="60px" data-src="./images/15.jpg" alt="?"><br/>&nbsp;</td>
-							</tr>
-							<tr>
-								<td><img width="60px" height="60px" data-src="./images/21.jpg" alt="?"><br/>&nbsp;</td>
-								<td><img width="60px" height="60px" data-src="./images/17.jpg" alt="?"><br/>&nbsp;</td>
-								<td><img width="60px" height="60px" data-src="./images/18.jpg" alt="?"><br/>&nbsp;</td>
-								<td><img width="60px" height="60px" data-src="./images/19.jpg" alt="?"><br/>&nbsp;</td>
-								<td><img width="60px" height="60px" data-src="./images/20.jpg" alt="?"><br/>&nbsp;</td>
-							</tr>
-						</tbody>
-					</table>
-					</section>
-					<section>
-						<table>
-							<thead>
-								<tr>
-									<h2>Réponses</h2>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><img width="60px" height="60px" data-src="./images/01.jpg" alt="?"><br/><small>Ubuntu</small></td>
-									<td><img width="60px" height="60px" data-src="./images/02.jpg" alt="?"><br/><small>Docker</small></td>
-									<td><img width="60px" height="60px" data-src="./images/03.jpg" alt="?"><br/><small>Elasticsearch</small></td>
-									<td><img width="60px" height="60px" data-src="./images/04.jpg" alt="?"><br/><small>Java</small></td>
-									<td><img width="60px" height="60px" data-src="./images/05.jpg" alt="?"><br/><small>Logstash</small></td>
-								</tr>
-								<tr>
-									<td><img width="60px" height="60px" data-src="./images/06.jpg" alt="?"><br/><small>AngularJS</small></td>
-									<td><img width="60px" height="60px" data-src="./images/07.jpg" alt="?"><br/><small>MongoDB</small></td>
-									<td><img width="60px" height="60px" data-src="./images/08.jpg" alt="?"><br/><small>Git</small></td>
-									<td><img width="60px" height="60px" data-src="./images/09.jpg" alt="?"><br/><small>Spring</small></td>
-									<td><img width="60px" height="60px" data-src="./images/10.jpg" alt="?"><br/><small>JHipster</small></td>
-								</tr>
-								<tr>
-									<td><img width="60px" height="60px" data-src="./images/11.jpg" alt="?"><br/><small>Bower</small></td>
-									<td><img width="60px" height="60px" data-src="./images/12.jpg" alt="?"><br/><small>Jenkins</small></td>
-									<td><img width="60px" height="60px" data-src="./images/13.jpg" alt="?"><br/><small>Scala</small></td>
-									<td><img width="60px" height="60px" data-src="./images/14.jpg" alt="?"><br/><small>IntelliJ</small></td>
-									<td><img width="60px" height="60px" data-src="./images/15.jpg" alt="?"><br/><small>Redis</small></td>
-								</tr>
-								<tr>
-									<td><img width="60px" height="60px" data-src="./images/21.jpg" alt="?"><br/><small>Kibana</small></td>
-									<td><img width="60px" height="60px" data-src="./images/17.jpg" alt="?"><br/><small>Grunt</small></td>
-									<td><img width="60px" height="60px" data-src="./images/18.jpg" alt="?"><br/><small>ReactJS</small></td>
-									<td><img width="60px" height="60px" data-src="./images/19.jpg" alt="?"><br/><small>Cassandra</small></td>
-									<td><img width="60px" height="60px" data-src="./images/20.jpg" alt="?"><br/><small>Yeoman</small></td>
-								</tr>
-							</tbody>
-						</table>
-					</section>
-				</section>
-									
-				<section>
-					<section>
-						<h1>Travaux pratiques</h1>
-					</section>
-					<section>
-						<h2>Principe</h2>
-						<table>
-							<tbody>
-							<td>
-								<ul>
-									<li>Chacun ramène son PC</li>
-									<li>Ou s'en fait prêter un...</li>
-									<li>Ou en binôme...</li>
-									<li>Puis on travaille ensemble</li>
-								</ul>
-							</td>
-							<td>
-								<img width="200px" height="200px" data-src="./images/Laptop.png" alt="?">
-							</td>
-						</tbody>
-
-					</table>
-					</section>
-					<section>
-						<h2>Pour tester</h2>
-						<ul>
-							<li>Une technologie</li>
-							<li>Un langage</li>
-							<li>Un outil</li>
-							<li>Un framework</li>
-							<li>Une méthode</li>
-							<li>Etc.</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Un ou plusieurs animateurs</h2>
-						<ul>
-							<li>Pour suivre la séance</li>
-							<li>Pour aider et apporter des solutions</li>
-						</ul>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h1>Battle de code</h1>
-					</section>
-					<section>
-						<h2>Principe</h2>
-						<ul>
-							<li>Un maximum de PC</li>
-							<li>On forme plusieurs équipes</li>
-							<li>On résout des problèmes</li>
-							<br/>
-						</ul>
-						<br/>
-						<table>
-							<tbody>
-								<tr>
-									<td bgcolor="#4285f4"><img data-src="./images/logo-catamania.png" alt="?"></td>
-									<td rowspan="3"><img height="50%" data-src="./images/vs.png" alt="?"></td>
-									<td bgcolor="#ff0000"><img data-src="./images/logo-catamania.png" alt="?"></td>
-								</tr>
-								<tr>
-									<td/>
-									<td/>
-								</tr>
-								<tr>
-									<td bgcolor="#009958"><img data-src="./images/logo-catamania.png" alt="?"></td>
-									<td bgcolor="#febe0f"><img data-src="./images/logo-catamania.png" alt="?"></td>
-								</tr>
-							</tbody>
-						</table>
-					</section>
-				</section>
-				<section>
-					<h1>Slack <img height="15%" width="15%" data-src="./images/slack.png" alt="?"></h1>
-					<ul>
-						<li>Outil de communication</li>
-						<ul>
-							<li type="circle"><a href="https://cat-amania.slack.com/signup" target="_blank">https://cat-amania.slack.com/signup</a></li>
-						</ul>
-						<br/>
-
-						<li>Initialisé par : Nicolas MAUROY</li>
-						<br/>
-
-						<li>Utilisé pour</li>
-						<ul>
-							<li type="circle">Communication entre projets, entre collaborateurs</li>
-							<li type="circle">Permet le partage des ressources</li>
-							<li type="circle">Forum d'entraide</li>
-						</ul>
-					</ul>
-				</section>
-
-				<section>
-					<table><td>
-					<h1>GitHub</h1></td><td><img height="150" data-src="./images/Octocat.png" alt="?"></td></table>
-					<ul>
-						<li>Héberger les ressources publiques</li>
-						<ul>
-							<li type="circle"><a href="https://github.com/cat-amania" target="_blank">https://github.com/cat-amania</a></li>
-						</ul>
-						<br/>
-
-						<li>Initialisé par : Pascal GRIMAUD</li>
-						<br/>
-
-						<li>Peut-être un jour...</li>
-						<ul>
-							<li type="circle">Construire un projet open source</li>
-							<li type="circle">Construire un blog technique</li>
-						</ul>
-					</ul>
-				</section>
-
-				<section>
-					<h1>Tout plein<br/>d'autres choses...</h1>
-					<ul>
-						<li>A vous de faire vivre la communauté</li>
-						<li>D'avoir des idées</li>
-						<li>Définir son cap</li>
-					</ul>
-				</section>
-
-				<section>
-					<section>
-						<h1>ORGANISATION</h1>
-						<img width="40%" height="40%" data-src="./images/planning.png" alt="planning">
-					</section>
-					<section>
-						<h2>Quand ?</h2>
-						<ul>
-							<li>Mardi, mercredi ou jeudi</li>
-							<li>Le soir à 19h ?</li>
-							<li>Fin max à 21h ?</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Combien de temps ?</h2>
-						<ul>
-							<li>Durée d'une présentation : 30min à 1h</li>
-							<li>Durée de travaux pratiques : 1h à 2h</li>
-							<li>Durée de battle de codes : 1h à 2h</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Fréquence ?</h2>
-						<ul>
-							<li>L'idéal : 1 fois par mois</li>
-						</ul>
-					</section>
-				</section>
-
-				<section>
-					<h1>Quelques règles</h1>
-					<ul>
-						<li>Aucun engagement</li>
-						<li>Aucune obligation</li>
-						<li>Aucune contrainte</li>
-						<li>Bonne humeur & motivation</li>
-					</ul>
-				</section>
-
-				<section>
-					<h1>Questions ?</h1>
-					<img data-src="./images/question.png" alt="?">
-				</section>
-				
-				<section>
-					<h1><small>Merci de votre attention</small></h1>
-					<img width="30%" height="30%" data-src="./images/to_be_continued.png" alt="to_be_continued">
-					<p>
-						<small><a href="https://github.com/hakimel/reveal.js" target="_blank">Reveal.js </a> - The HTML Presentation Framework</small>
-					</p>
-				</section>
-			</div>
-
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
-		<script>
-
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				// transition: 'slide', // none/fade/slide/convex/concave/zoom
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-
-		</script>
-
-	</body>
+        // transition: 'slide', // none/fade/slide/convex/concave/zoom
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+        // Optional reveal.js plugins
+        dependencies: [
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/highlight/highlight.js', async: true, condition: function () {
+                return !!document.querySelector('pre code');
+            }, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            },
+            {src: 'plugin/zoom-js/zoom.js', async: true},
+            {src: 'plugin/notes/notes.js', async: true}
+        ]
+    });
+</script>
+</body>
 </html>
