@@ -30,67 +30,15 @@
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
         <section>
-            <section>
-                <h1>Projet de<br/>Communauté Technique</h1>
-
-                <h3><a href="http://www.cat-amania.com" target="_blank">www.cat-amania.com</a></h3>
-                <a href="http://www.cat-amania.com" target="_blank">
-                    <img height="120px" src="./images/logocatsign.jpg" alt="logo_catamania">
-                </a>
-
-                <p>
-                    <small>Créé par <a href="">Pascal GRIMAUD</a></small>
-                </p>
-            </section>
-            <section id="transitions">
-                <h2>Transition Styles</h2>
-                <p>
-                    <a href="?transition=none#/transitions">None</a> -
-                    <a href="?transition=fade#/transitions">Fade</a> -
-                    <a href="?transition=slide#/transitions">Slide</a> -
-                    <a href="?transition=convex#/transitions">Convex</a> -
-                    <a href="?transition=concave#/transitions">Concave</a> -
-                    <a href="?transition=zoom#/transitions">Zoom</a>
-                </p>
-                <h2>Themes</h2>
-                <p>
-                    <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-                    <a href="#"
-                       onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black
-                        (default)</a> -
-                    <a href="#"
-                       onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a>
-                    -
-                    <a href="#"
-                       onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a>
-                    -
-                    <a href="#"
-                       onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a>
-                    -
-                    <a href="#"
-                       onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a>
-                    -
-                    <a href="#"
-                       onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a>
-                    <br>
-                    <a href="#"
-                       onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a>
-                    -
-                    <a href="#"
-                       onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a>
-                    -
-                    <a href="#"
-                       onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a>
-                    -
-                    <a href="#"
-                       onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a>
-                    -
-                    <a href="#"
-                       onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-                </p>
-            </section>
+            <h1>Projet de<br/>Communauté Technique</h1>
+            <h3><a href="http://www.cat-amania.com" target="_blank">www.cat-amania.com</a></h3>
+            <a href="http://www.cat-amania.com" target="_blank">
+                <img height="120px" src="./images/logocatsign.jpg" alt="logo_catamania">
+            </a>
+            <p>
+                <small>Créé par <a href="">Pascal GRIMAUD</a></small>
+            </p>
         </section>
-
         <section>
             <h2>Présentation personnelle</h2>
             <p>Pascal GRIMAUD</p>
@@ -98,10 +46,10 @@
             <p>Consultant Java EE<br/>Depuis juin 2015 chez Cat-Amania pour</p>
             <p><img width="350px" data-src="./images/logo_sogecap.png" alt="logo_sogecap"></p>
             <br>
-            <a href="https://www.linkedin.com/in/pascalgrimaud" target="_blank">
+            <a href="https://www.linkedin.com/in/pascalgrimaud" target="_blank" title="linkedin">
                 <img height="48px" data-src="./images/linkedin-logo.png" alt="linkelin_icone">
             </a>
-            <a href="https://github.com/pascalgrimaud/" target="_blank" title="mon git_ub">
+            <a href="https://github.com/pascalgrimaud/" target="_blank" title="github">
                 <img height="48px" data-src="./images/github.png" alt="git_icone">
             </a>
         </section>
@@ -352,7 +300,6 @@
                         <img width="200px" height="200px" data-src="./images/Laptop.png" alt="?">
                     </td>
                     </tbody>
-
                 </table>
             </section>
             <section>
@@ -438,10 +385,8 @@
                     </li>
                 </ul>
                 <br/>
-
                 <li>Initialisé par : Pascal GRIMAUD</li>
                 <br/>
-
                 <li>Peut-être un jour...</li>
                 <ul>
                     <li type="circle">Construire un projet open source</li>
@@ -503,7 +448,6 @@
                 <small>Merci de votre attention</small>
             </h1>
             <img width="30%" height="30%" data-src="./images/to_be_continued.png" alt="to_be_continued">
-
             <p>
                 <small><a href="https://github.com/hakimel/reveal.js" target="_blank">Reveal.js </a> - The HTML
                     Presentation Framework
@@ -522,8 +466,8 @@
         progress: true,
         history: true,
         center: true,
-
         // transition: 'slide', // none/fade/slide/convex/concave/zoom
+        theme: Reveal.getQueryHash().theme,
         transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
         // Optional reveal.js plugins
         dependencies: [
