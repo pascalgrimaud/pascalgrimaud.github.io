@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Paris JHipster Meetup #3</title>
+		<meta name="description" content="Paris JHipster Meetup #3">
+		<meta name="author" content="Pascal Grimaud">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<!------------------------------------------------------------->
+				<!-- page d'attente -->
+				<section>
+					<h1>Paris JHipster Meetup #3</h1>
+					<img data-src="./images/logo-jhipster-drink-coffee.png" alt="">
+				</section>
+
+				<!------------------------------------------------------------->
+				<!-- présentation -->
+				<section>
+					<h2>Pascal GRIMAUD</h2>
+					<p>Consultant Java EE</p>
+					<p>Passionné par Docker</p>
+					<p>
+						<a href="mailto:pascalgrimaud@gmail.com" target="_blank">pascalgrimaud@gmail.com</a>
+					</p>
+					<br/><br/><br/>
+					<p>Réseaux :<br/>
+					<a href="https://www.linkedin.com/in/pascalgrimaud" target="_blank" title="linkedin">
+							<img height="48px" data-src="./images/linkedin.png" alt="">
+					</a>
+					<a href="http://www.viadeo.com/fr/profile/pascal.grimaud" target="_blank" title="viadeo">
+							<img height="48px" data-src="./images/viadeo.jpg" alt="">
+					</a>
+					<a href="https://www.facebook.com/pascal.grimaud" target="_blank" title="facebook">
+							<img height="48px" data-src="./images/facebook.jpg" alt="">
+					</a>
+					<a href="https://twitter.com/pascalgrimaud" target="_blank" title="twitter">
+							<img height="48px" data-src="./images/twitter.jpg" alt="">
+					</a>
+					<a href="https://github.com/pascalgrimaud/" target="_blank" title="github">
+							<img height="48px" data-src="./images/github.png" alt="">
+					</a>
+					</p>
+				</section>
+
+				<!------------------------------------------------------------->
+				<!-- titre du meetup -->
+				<section>
+					<h1>JHipster & Docker</h1>
+					<img height="180px" data-src="./images/logo-jhipster2x.png" alt=""><img data-src="./images/docker-birthday.png" alt="">
+				</section>
+
+				<!------------------------------------------------------------->
+				<!-- Sommaire -->
+				<section>
+					<h2>Docker au sein de JHipster</h2>
+					<ul>
+						<li>Organization JHipster</li>
+						<li>Base de données et moteur de recherche</li>
+						<li>Builds Travis</li>
+						<li>Microservices</li>
+					</ul>
+				</section>
+
+				<!------------------------------------------------------------->
+				<section>
+					<section>
+						<h2>Docker Engine</h2>
+						<img width="30%" height="50%" data-src="./images/docker.png" alt="Docker Engine">
+					</section>
+					<section>
+						<ul>
+							<li>Github generator-jhipster:
+								<a href="https://github.com/jhipster/generator-jhipster/blob/master/Dockerfile" target="_blank">Dockerfile</a>
+							</li>
+
+					</section>
+					<section>
+						<ul>
+							<li>GitHub: <a href="https://github.com/jhipster/jhipster-docker">jhipster/jhipster-docker</a></li>
+							<li>Récupérer l'image:</li>
+						</ul>
+						<br/>
+						<p>
+							<code class="hljs">docker pull jhipster/jhiprster</code>
+						</p>
+					</section>
+					<section>
+						<h4>Basée sur ubuntu:trusty</h4>
+						<ul>
+							<li>java jdk 8</li>
+							<li>node 4 + npm</li>
+							<li>yeoman</li>
+							<li>bower</li>
+							<li>gulp</li>
+							<li>wget, curl, vim, git, etc...</li>
+						</ul>
+					</section>
+				</section>
+
+				<!------------------------------------------------------------->
+				<section>
+					<section>
+						<h2>Docker Compose</h2>
+						<img width="30%" height="50%" data-src="./images/docker-compose.png" alt="Docker Compose">
+					</section>
+				</section>
+
+				<!------------------------------------------------------------->
+				<section>
+					<section>
+						<h2>Docker Hub</h2>
+						<img data-src="./images/docker-hub.jpg" alt="Docker Hub">
+					</section>
+					<section>
+						<h2>Organisation JHipster</h2>
+						<img data-src="./images/docker-hub.jpg" alt="Docker Hub">
+					</section>
+					<section>
+						<h2>Prochainement...</h2>
+					</section>
+				</section>
+
+				<!------------------------------------------------------------->
+				<!-- fin -->
+				<section>
+		            <h1>
+		                <small>Merci de votre attention</small>
+		            </h1>
+		            <img width="30%" height="30%" data-src="./images/to_be_continued.png" alt="to_be_continued">
+		            <p>
+		                <small><a href="https://github.com/hakimel/reveal.js" target="_blank">Reveal.js </a> - The HTML
+		                    Presentation Framework
+		                </small>
+		            </p>
+		        </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
