@@ -38,29 +38,25 @@
 				<!------------------------------------------------------------->
 				<!-- présentation -->
 				<section>
+					<br/><br/>
 					<h2>Pascal GRIMAUD</h2>
-					<p>Consultant Java EE</p>
-					<p>Passionné par Docker</p>
+					<p>Java EE Consultant</p>
+					<p>Docker enthusiast</p>
+					<br/>
+					<p>Contact:<br/>
 					<p>
-						<a href="mailto:pascalgrimaud@gmail.com" target="_blank">pascalgrimaud@gmail.com</a>
-					</p>
-					<br/><br/><br/>
-					<p>Réseaux :<br/>
-					<a href="https://www.linkedin.com/in/pascalgrimaud" target="_blank" title="linkedin">
-							<img height="48px" data-src="./images/linkedin.png" alt="">
-					</a>
-					<a href="http://www.viadeo.com/fr/profile/pascal.grimaud" target="_blank" title="viadeo">
-							<img height="48px" data-src="./images/viadeo.jpg" alt="">
-					</a>
-					<a href="https://www.facebook.com/pascal.grimaud" target="_blank" title="facebook">
-							<img height="48px" data-src="./images/facebook.jpg" alt="">
-					</a>
-					<a href="https://twitter.com/pascalgrimaud" target="_blank" title="twitter">
-							<img height="48px" data-src="./images/twitter.jpg" alt="">
-					</a>
-					<a href="https://github.com/pascalgrimaud/" target="_blank" title="github">
-							<img height="48px" data-src="./images/github.png" alt="">
-					</a>
+						<a href="https://www.linkedin.com/in/pascalgrimaud" target="_blank" title="linkedin">
+								<img height="48px" data-src="./images/linkedin.png" alt="">
+						</a>
+						<a href="http://www.viadeo.com/fr/profile/pascal.grimaud" target="_blank" title="viadeo">
+								<img height="48px" data-src="./images/viadeo.jpg" alt="">
+						</a>
+						<a href="https://twitter.com/pascalgrimaud" target="_blank" title="twitter">
+								<img height="48px" data-src="./images/twitter.jpg" alt="">
+						</a>
+						<a href="https://github.com/pascalgrimaud/" target="_blank" title="github">
+								<img height="48px" data-src="./images/github.png" alt="">
+						</a>
 					</p>
 				</section>
 
@@ -74,11 +70,11 @@
 				<!------------------------------------------------------------->
 				<!-- Sommaire -->
 				<section>
-					<h2>Docker au sein de JHipster</h2>
+					<h2>How Docker is used ?</h2>
 					<ul>
-						<li>Organization JHipster</li>
-						<li>Base de données et moteur de recherche</li>
-						<li>Builds Travis</li>
+						<li>JHipster installation with Docker</li>
+						<li>Services generator</li>
+						<li>JHipster Organization at Docker Hub</li>
 						<li>Microservices</li>
 					</ul>
 				</section>
@@ -87,35 +83,57 @@
 				<section>
 					<section>
 						<h2>Docker Engine</h2>
-						<img width="30%" height="50%" data-src="./images/docker.png" alt="Docker Engine">
+						<img width="50%" height="50%" data-src="./images/docker.png" alt="Docker Engine">
 					</section>
 					<section>
+						<h4>Docker image based on ubuntu:trusty</h4>
 						<ul>
-							<li>Github generator-jhipster:
-								<a href="https://github.com/jhipster/generator-jhipster/blob/master/Dockerfile" target="_blank">Dockerfile</a>
+							<li>Image:
+								<a href="https://hub.docker.com/r/jhipster/jhipster/" target="_blank">jhipster/jhipster</a>
 							</li>
 
-					</section>
-					<section>
-						<ul>
-							<li>GitHub: <a href="https://github.com/jhipster/jhipster-docker">jhipster/jhipster-docker</a></li>
-							<li>Récupérer l'image:</li>
+							<li>generator-jhipster:
+								<a href="https://github.com/jhipster/generator-jhipster/blob/master/Dockerfile" target="_blank">Dockerfile</a>
+							</li>
+							<ul>
+								<li>Java jdk 8</li>
+								<li>node 4 + npm</li>
+								<li>git</li>
+								<li>yeoman</li>
+								<li>bower</li>
+								<li>gulp</li>
+								<li>wget, curl, vim, etc...</li>
+							</ul>
 						</ul>
-						<br/>
-						<p>
-							<code class="hljs">docker pull jhipster/jhiprster</code>
-						</p>
 					</section>
-					<section>
-						<h4>Basée sur ubuntu:trusty</h4>
-						<ul>
-							<li>java jdk 8</li>
-							<li>node 4 + npm</li>
-							<li>yeoman</li>
-							<li>bower</li>
-							<li>gulp</li>
-							<li>wget, curl, vim, git, etc...</li>
-						</ul>
+					<section data-markdown>
+						<script type="text/template">
+							## Commandes
+
+							Installation
+
+							```
+							$ docker pull jhipster/jhipster
+							```
+
+							Use JHipster v2.27.2
+							```
+							$ docker run --rm -it -v $(pwd):/home/jhipster/app \
+							  -v ~/.m2:/home/jhipster/.m2 jhipster/jhipster:v2.27.2 yo jhipster
+							```
+
+							Use JHipster v3.0.0
+							```
+							$ docker run --rm -it -v $(pwd):/home/jhipster/app \
+							  -v ~/.m2:/home/jhipster/.m2 jhipster/jhipster:v3.0.0 yo jhipster
+							```
+
+							Use JHipster master
+							```
+							$ docker run --rm -it -v $(pwd):/home/jhipster/app \
+							  -v ~/.m2:/home/jhipster/.m2 jhipster/jhipster:master yo jhipster
+							```
+						</script>
 					</section>
 				</section>
 
@@ -123,7 +141,86 @@
 				<section>
 					<section>
 						<h2>Docker Compose</h2>
-						<img width="30%" height="50%" data-src="./images/docker-compose.png" alt="Docker Compose">
+						<img width="50%" height="50%" data-src="./images/docker-compose.png" alt="Docker Compose">
+					</section>
+					<section>
+						<h4>After generating a JHipster project</h4>
+						<ul>
+							<li>Folder src/main/docker</li>
+							<ul>
+								<li>app.yml</li>
+								<li>Dockerfile</li>
+								<li>elasticsearch.yml</li>
+								<li>mysql.yml</li>
+								<li>sonar.yml</li>
+							</ul>
+						</ul>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						mysql.yml
+						```
+						version: '2'
+						services:
+						    jhipster-mysql:
+						        container_name: jhipster-mysql
+						        image: mysql:5.7.11
+						        # volumes:
+						        #     - ~/volumes/jhipster/jhipster/mysql/:/var/lib/mysql/
+						        environment:
+						            - MYSQL_USER=root
+						            - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+						            - MYSQL_DATABASE=jhipster
+						        ports:
+						            - 3306:3306
+						        command: mysqld --lower_case_table_names=1
+						```
+
+						To start MySQL database:
+						```
+						docker-compose -f src/main/docker/mysql.yml up -d
+						```
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						## Demo
+
+						sonar.yml
+						```
+						version: '2'
+						services:
+						    jhipster-sonar:
+						        container_name: jhipster-sonar
+						        image: sonarqube:5.3
+						        ports:
+						            - 9000:9000
+						            - 9092:9092
+						```
+
+						To start Sonar
+						```
+						docker-compose -f src/main/docker/sonar.yml up
+						```
+
+						To launch a Sonar Analyze
+						```
+						mvn sonar:sonar
+						```
+						</script>
+					</section>
+					<section>
+						<h2>Thanks to Travis CI</h2>
+						<img data-src="./images/travis-ci.png" alt="Travis CI">
+						<br/>
+						<p>
+							<a href="https://travis-ci.org/jhipster/generator-jhipster" target="_blank">
+								https://travis-ci.org/jhipster/generator-jhipster
+							</a>
+						</p>
+					</section>
+					<section>
+						<img data-src="./images/docker-hub.jpg" alt="Docker Hub">
 					</section>
 				</section>
 
@@ -134,7 +231,7 @@
 						<img data-src="./images/docker-hub.jpg" alt="Docker Hub">
 					</section>
 					<section>
-						<h2>Organisation JHipster</h2>
+						<h2>Organization JHipster</h2>
 						<img data-src="./images/docker-hub.jpg" alt="Docker Hub">
 					</section>
 					<section>
@@ -143,10 +240,165 @@
 				</section>
 
 				<!------------------------------------------------------------->
+				<section>
+					<section>
+						<h1>Demo with</h1>
+						<img data-src="./images/cassandra.png" alt="Cassandra">
+					</section>
+					<section>
+						Create a JHipster project with Cassandra as database
+						<pre><code data-trim>{
+  "generator-jhipster": {
+	"jhipsterVersion": "3.0.0",
+	"baseName": "jhipster",
+	"packageName": "com.mycompany.myapp",
+	"packageFolder": "com/mycompany/myapp",
+	"serverPort": "8080",
+	"authenticationType": "session",
+	"hibernateCache": "no",
+	"clusteredHttpSession": "no",
+	"websocket": "no",
+	"databaseType": "cassandra",
+	"devDatabaseType": "cassandra",
+	"prodDatabaseType": "cassandra",
+	"searchEngine": "no",
+	"buildTool": "maven",
+	"enableSocialSignIn": false,
+	"rememberMeKey": "722f133a8480120ddc4436f084776036db6958b2",
+	"useSass": false,
+	"applicationType": "monolith",
+	"testFrameworks": [
+	  "gatling"
+	],
+	"enableTranslation": true,
+	"nativeLanguage": "en",
+	"languages": [
+	  "en"
+	]
+  }
+}</code></pre>
+					</section>
+					<section>
+						Create a simple entity: meetup
+						<pre><code data-trim>{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "meetup",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160328225805",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "meetup"
+}</code></pre>
+						Package the application
+						<pre><code>mvn package -Pprod -DskipTests=true</code></pre>
+					</section>
+					<section data-markdown>
+						List folder:
+						```
+						ls -l src/main/docker
+						```
+
+						Build images:
+						```
+						docker-compose -f src/main/docker/cassandra-opscenter.yml build
+						```
+
+						Launch Cassandra and Opscenter:
+						```
+						docker-compose -f src/main/docker/cassandra-opscenter.yml up
+						```
+
+						Go to [http://localhost:8888](http://localhost:8888)
+					</section>
+					<section data-markdown>
+						Check jhipster-cassandra (1st time):
+						```
+						docker exec -it jhipster-cassandra ls -l
+						```
+						```
+						docker exec -it jhipster-cassandra cqlsh -k jhipster -e "select * from user;"
+						```
+
+						Check docker_jhipster-cassandra-node_1 (1st time):
+						```
+						docker exec -it docker_jhipster-cassandra-node_1 ls -l
+						```
+						```
+						docker exec -it docker_jhipster-cassandra-node_1 cqlsh -k jhipster -e "select * from user;"
+						```
+					</section>
+					<section data-markdown>
+						Copy cql files:
+						```
+						docker cp src/main/ressources/config/cql jhipster-cassandra:/
+						```
+
+						Initialize the database with default schema:
+						```
+						docker exec -it jhipster-cassandra init
+						```
+
+						Create entities:
+						```
+						docker exec -it jhipster-cassandra entities
+						```
+					</section>
+					<section data-markdown>
+						Check jhipster-cassandra (2nd time):
+						```
+						docker exec -it jhipster-cassandra ls -l
+						```
+						```
+						docker exec -it jhipster-cassandra cqlsh -k jhipster -e "select * from user;"
+						```
+
+						Check docker_jhipster-cassandra-node_1 (2nd time):
+						```
+						docker exec -it docker_jhipster-cassandra-node_1 ls -l
+						```
+						```
+						docker exec -it docker_jhipster-cassandra-node_1 cqlsh -k jhipster -e "select * from user;"
+						```
+					</section>
+					<section data-markdown>
+						Add a new node:
+						```
+						docker-compose -f src/main/docker/cassandra-opscenter.yml \
+						scale jhipster-cassandra-node=2
+						```
+
+						Add another node:
+						```
+						docker-compose -f src/main/docker/cassandra-opscenter.yml \
+						scale jhipster-cassandra-node=3
+						```
+
+						Check docker container:
+						```
+						docker ps
+						```
+
+					</section>
+					<section data-markdown>
+						Start application in production profiles:
+						```
+						java -jar target/*.war --spring.data.cassandra.contact-points="172.20.0.3,172.20.0.4,172.20.0.5,172.20.0.6" --spring.profiles.active="prod"
+						```
+					</section>
+				</section>
+
 				<!-- fin -->
 				<section>
 		            <h1>
-		                <small>Merci de votre attention</small>
+		                <small>Thank you</small>
 		            </h1>
 		            <img width="30%" height="30%" data-src="./images/to_be_continued.png" alt="to_be_continued">
 		            <p>
