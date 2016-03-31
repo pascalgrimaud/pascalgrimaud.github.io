@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="css/theme/white.css" id="theme">
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- <link rel="stylesheet" href="styles/rainbow.css"> -->
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -87,21 +88,20 @@
 					</section>
 					<section>
 						<h4>Docker image based on ubuntu:trusty</h4>
+						<p><img width="20%" height="20%" data-src="./images/ubuntu.png" alt="ubuntu"></p>
+
 						<ul>
 							<li>Image:
 								<a href="https://hub.docker.com/r/jhipster/jhipster/" target="_blank">jhipster/jhipster</a>
 							</li>
-
 							<li>generator-jhipster:
 								<a href="https://github.com/jhipster/generator-jhipster/blob/master/Dockerfile" target="_blank">Dockerfile</a>
 							</li>
 							<ul>
+								<li>git</li>
 								<li>Java jdk 8</li>
 								<li>node 4 + npm</li>
-								<li>git</li>
-								<li>yeoman</li>
-								<li>bower</li>
-								<li>gulp</li>
+								<li>yeoman, bower, gulp</li>
 								<li>wget, curl, vim, etc...</li>
 							</ul>
 						</ul>
@@ -113,24 +113,24 @@
 							Installation
 
 							```
-							$ docker pull jhipster/jhipster
+							docker pull jhipster/jhipster
 							```
 
 							Use JHipster v2.27.2
 							```
-							$ docker run --rm -it -v $(pwd):/home/jhipster/app \
+							docker run --rm -it -v $(pwd):/home/jhipster/app \
 							  -v ~/.m2:/home/jhipster/.m2 jhipster/jhipster:v2.27.2 yo jhipster
 							```
 
 							Use JHipster v3.0.0
 							```
-							$ docker run --rm -it -v $(pwd):/home/jhipster/app \
+							docker run --rm -it -v $(pwd):/home/jhipster/app \
 							  -v ~/.m2:/home/jhipster/.m2 jhipster/jhipster:v3.0.0 yo jhipster
 							```
 
 							Use JHipster master
 							```
-							$ docker run --rm -it -v $(pwd):/home/jhipster/app \
+							docker run --rm -it -v $(pwd):/home/jhipster/app \
 							  -v ~/.m2:/home/jhipster/.m2 jhipster/jhipster:master yo jhipster
 							```
 						</script>
@@ -141,7 +141,7 @@
 				<section>
 					<section>
 						<h2>Docker Compose</h2>
-						<img width="50%" height="50%" data-src="./images/docker-compose.png" alt="Docker Compose">
+						<img width="30%" height="30%" data-src="./images/logo-title-final-compose-2b.png" alt="Docker Compose">
 					</section>
 					<section>
 						<h4>After generating a JHipster project</h4>
@@ -228,14 +228,18 @@
 				<section>
 					<section>
 						<h2>Docker Hub</h2>
-						<img data-src="./images/docker-hub.jpg" alt="Docker Hub">
+						<img data-src="./images/docker-hub.png" alt="Docker Hub">
 					</section>
 					<section>
 						<h2>Organization JHipster</h2>
 						<img data-src="./images/docker-hub.jpg" alt="Docker Hub">
 					</section>
 					<section>
-						<h2>Prochainement...</h2>
+						<h4>Prochainement...</h4>
+						<p>
+						<img width="30%" height="30%" data-src="./images/logo-title-final-registry-2.png" alt="Docker Hub">
+						<img width="30%" height="30%" data-src="./images/logo-title-final-swarm-2d-219x300.png" alt="Docker Hub">
+						</p>
 					</section>
 				</section>
 
@@ -388,6 +392,11 @@
 
 					</section>
 					<section data-markdown>
+						Inspect containers
+						```
+						docker inspect --format '{{ .NetworkSettings.Networks.docker_default.IPAddress }}' $(docker ps -q)
+						```
+
 						Start application in production profiles:
 						```
 						java -jar target/*.war --spring.data.cassandra.contact-points="172.20.0.3,172.20.0.4,172.20.0.5,172.20.0.6" --spring.profiles.active="prod"
