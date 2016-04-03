@@ -47,16 +47,16 @@
 					<p>Contact:<br/>
 					<p>
 						<a href="https://www.linkedin.com/in/pascalgrimaud" target="_blank" title="linkedin">
-								<img height="48px" data-src="./images/linkedin.png" alt="">
+							<img height="48px" data-src="./images/linkedin.png" alt="">
 						</a>
 						<a href="http://www.viadeo.com/fr/profile/pascal.grimaud" target="_blank" title="viadeo">
-								<img height="48px" data-src="./images/viadeo.jpg" alt="">
+							<img height="48px" data-src="./images/viadeo.jpg" alt="">
 						</a>
 						<a href="https://twitter.com/pascalgrimaud" target="_blank" title="twitter">
-								<img height="48px" data-src="./images/twitter.jpg" alt="">
+							<img height="48px" data-src="./images/twitter.jpg" alt="">
 						</a>
 						<a href="https://github.com/pascalgrimaud/" target="_blank" title="github">
-								<img height="48px" data-src="./images/github.png" alt="">
+							<img height="48px" data-src="./images/github.png" alt="">
 						</a>
 					</p>
 				</section>
@@ -87,9 +87,8 @@
 						<img width="50%" height="50%" data-src="./images/docker.png" alt="Docker Engine">
 					</section>
 					<section>
-						<h4>Docker image based on ubuntu:trusty</h4>
-						<p><img width="20%" height="20%" data-src="./images/ubuntu.png" alt="ubuntu"></p>
-
+						<h4>Based on ubuntu:trusty</h4>
+						<p><img width="15%" height="15%" data-src="./images/ubuntu.png" alt="ubuntu"></p>
 						<ul>
 							<li>Image:
 								<a href="https://hub.docker.com/r/jhipster/jhipster/" target="_blank">jhipster/jhipster</a>
@@ -99,7 +98,7 @@
 							</li>
 							<ul>
 								<li>git</li>
-								<li>Java jdk 8</li>
+								<li>java 8</li>
 								<li>node 4 + npm</li>
 								<li>yeoman, bower, gulp</li>
 								<li>wget, curl, vim, etc...</li>
@@ -135,13 +134,20 @@
 							```
 						</script>
 					</section>
+					<section>
+						<h2>Use cases</h2>
+						<ul>
+							<li>Use older version of JHipster</li>
+							<li>Test pull request</li>
+						</ul>
+					</section>
 				</section>
 
 				<!------------------------------------------------------------->
 				<section>
 					<section>
 						<h2>Docker Compose</h2>
-						<img width="30%" height="30%" data-src="./images/logo-title-final-compose-2b.png" alt="Docker Compose">
+						<img width="30%" data-src="./images/logo-title-final-compose-2b.png" alt="Docker Compose">
 					</section>
 					<section>
 						<h4>After generating a JHipster project</h4>
@@ -210,17 +216,15 @@
 						</script>
 					</section>
 					<section>
-						<h2>Thanks to Travis CI</h2>
-						<img data-src="./images/travis-ci.png" alt="Travis CI">
+						<h4>Thanks to Travis CI</h4>
+						<img width="10%" height="10%" data-src="./images/travis-ci.png" alt="Travis CI">
 						<br/>
 						<p>
 							<a href="https://travis-ci.org/jhipster/generator-jhipster" target="_blank">
 								https://travis-ci.org/jhipster/generator-jhipster
 							</a>
+							<img data-src="./images/jhipster-travis.png" alt="JHipster Travis">
 						</p>
-					</section>
-					<section>
-						<img data-src="./images/docker-hub.jpg" alt="Docker Hub">
 					</section>
 				</section>
 
@@ -231,13 +235,13 @@
 						<img data-src="./images/docker-hub.png" alt="Docker Hub">
 					</section>
 					<section>
-						<h2>Organization JHipster</h2>
-						<img data-src="./images/docker-hub.jpg" alt="Docker Hub">
+						<h2>JHipster Organization</h2>
+						<img data-src="./images/jhipster-organization.png" alt="Docker Hub">
 					</section>
 					<section>
-						<h4>Prochainement...</h4>
+						<h4>Next...</h4>
 						<p>
-						<img width="30%" height="30%" data-src="./images/logo-title-final-registry-2.png" alt="Docker Hub">
+						<img width="30%" height="30%" data-src="./images/logo-title-final-registry-2-907x1024.png" alt="Docker Hub">
 						<img width="30%" height="30%" data-src="./images/logo-title-final-swarm-2d-219x300.png" alt="Docker Hub">
 						</p>
 					</section>
@@ -392,7 +396,7 @@
 
 					</section>
 					<section data-markdown>
-						Inspect containers
+						Get IPs of containers
 						```
 						docker inspect --format '{{ .NetworkSettings.Networks.docker_default.IPAddress }}' $(docker ps -q)
 						```
