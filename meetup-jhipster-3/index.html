@@ -87,8 +87,16 @@
 						<img width="50%" height="50%" data-src="./images/docker.png" alt="Docker Engine">
 					</section>
 					<section>
-						<h4>Based on ubuntu:trusty</h4>
-						<p><img width="15%" height="15%" data-src="./images/ubuntu.png" alt="ubuntu"></p>
+						<h4>Installations</h2>
+						<ul>
+							<li>Local installation</li>
+							<li>Vagrant box: <a href="https://github.com/jhipster/jhipster-devbox" target="_blank">devbox</a></li>
+							<li>Docker installation</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Docker installation<br/>Based on ubuntu:trusty</h4>
+						<p><img width="10%" height="10%" data-src="./images/ubuntu.png" alt="ubuntu"></p>
 						<ul>
 							<li>Image:
 								<a href="https://hub.docker.com/r/jhipster/jhipster/" target="_blank">jhipster/jhipster</a>
@@ -101,19 +109,20 @@
 								<li>java 8</li>
 								<li>node 4 + npm</li>
 								<li>yeoman, bower, gulp</li>
-								<li>wget, curl, vim, etc...</li>
+								<li>wget, curl, vim, etc.</li>
 							</ul>
 						</ul>
 					</section>
+					<section>
+						<h4>How to install</h4>
+						<pre><code>docker pull jhipster/jhipster</code></pre>
+						<p>
+							put archi here...
+						</p>
+					</section>
 					<section data-markdown>
 						<script type="text/template">
-							## Commandes
-
-							Installation
-
-							```
-							docker pull jhipster/jhipster
-							```
+							## Use cases
 
 							Use JHipster v2.27.2
 							```
@@ -134,13 +143,63 @@
 							```
 						</script>
 					</section>
-					<section>
-						<h2>Use cases</h2>
-						<ul>
-							<li>Use older version of JHipster</li>
-							<li>Test pull request</li>
-						</ul>
+					<section data-markdown>
+						<script type="text/template">
+							## Demo (1/3)
+
+							Create folder
+							```
+							mkdir jhipster && cd jhipster
+							```
+
+							Start a JHipster container
+							```
+							docker run --name jhipster \
+							  -v $(pwd):/home/jhipster/app -v ~/.m2:/home/jhipster/.m2 \
+							  -d -t jhipster/jhipster
+							```
+
+							Go into container
+							```
+							docker exec -it jhipster bash
+							```
+						</script>
 					</section>
+					<section>
+						<h2>Demo (1/3)</h2>
+						Create a JHipster project with Cassandra as database
+						<pre><code data-trim>{
+  "generator-jhipster": {
+	"jhipsterVersion": "3.0.0",
+	"baseName": "jhipster",
+	"packageName": "com.mycompany.myapp",
+	"packageFolder": "com/mycompany/myapp",
+	"serverPort": "8080",
+	"authenticationType": "session",
+	"hibernateCache": "no",
+	"clusteredHttpSession": "no",
+	"websocket": "no",
+	"databaseType": "cassandra",
+	"devDatabaseType": "cassandra",
+	"prodDatabaseType": "cassandra",
+	"searchEngine": "no",
+	"buildTool": "maven",
+	"enableSocialSignIn": false,
+	"rememberMeKey": "722f133a8480120ddc4436f084776036db6958b2",
+	"useSass": false,
+	"applicationType": "monolith",
+	"testFrameworks": [
+	  "gatling"
+	],
+	"enableTranslation": true,
+	"nativeLanguage": "en",
+	"languages": [
+	  "en"
+	]
+  }
+}</code></pre>
+					</section>
+
 				</section>
 
 				<!------------------------------------------------------------->
@@ -190,7 +249,7 @@
 					</section>
 					<section data-markdown>
 						<script type="text/template">
-						## Demo
+						## Demo (2/3)
 
 						sonar.yml
 						```
@@ -236,6 +295,7 @@
 					</section>
 					<section>
 						<h2>JHipster Organization</h2>
+						<a href="https://hub.docker.com/r/jhipster/" target="_blank">https://hub.docker.com/r/jhipster/</a>
 						<img data-src="./images/jhipster-organization.png" alt="Docker Hub">
 					</section>
 					<section>
@@ -252,39 +312,6 @@
 					<section>
 						<h1>Demo with</h1>
 						<img data-src="./images/cassandra.png" alt="Cassandra">
-					</section>
-					<section>
-						Create a JHipster project with Cassandra as database
-						<pre><code data-trim>{
-  "generator-jhipster": {
-	"jhipsterVersion": "3.0.0",
-	"baseName": "jhipster",
-	"packageName": "com.mycompany.myapp",
-	"packageFolder": "com/mycompany/myapp",
-	"serverPort": "8080",
-	"authenticationType": "session",
-	"hibernateCache": "no",
-	"clusteredHttpSession": "no",
-	"websocket": "no",
-	"databaseType": "cassandra",
-	"devDatabaseType": "cassandra",
-	"prodDatabaseType": "cassandra",
-	"searchEngine": "no",
-	"buildTool": "maven",
-	"enableSocialSignIn": false,
-	"rememberMeKey": "722f133a8480120ddc4436f084776036db6958b2",
-	"useSass": false,
-	"applicationType": "monolith",
-	"testFrameworks": [
-	  "gatling"
-	],
-	"enableTranslation": true,
-	"nativeLanguage": "en",
-	"languages": [
-	  "en"
-	]
-  }
-}</code></pre>
 					</section>
 					<section>
 						Create a simple entity: meetup
@@ -305,8 +332,8 @@
     "service": "no",
     "entityTableName": "meetup"
 }</code></pre>
-						Package the application
-						<pre><code>mvn package -Pprod -DskipTests=true</code></pre>
+						Run the application in production profile
+						<pre><code>mvn -Pprod</code></pre>
 					</section>
 					<section data-markdown>
 						List folder:
