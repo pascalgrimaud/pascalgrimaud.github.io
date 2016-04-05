@@ -44,8 +44,9 @@
 					<p>Java EE Consultant</p>
 					<p>Docker enthusiast</p>
 					<br/>
-					<p>Contact:<br/>
 					<p>
+						<small>Contact:</small>
+						<br/>
 						<a href="https://www.linkedin.com/in/pascalgrimaud" target="_blank" title="linkedin">
 							<img height="48px" data-src="./images/linkedin.png" alt="">
 						</a>
@@ -72,6 +73,7 @@
 				<!-- Sommaire -->
 				<section>
 					<h2>How Docker is used ?</h2>
+					<img data-src="./images/docker.png" alt="Docker Hub">
 					<ul>
 						<li>JHipster installation with Docker</li>
 						<li>Services generator</li>
@@ -84,7 +86,7 @@
 				<section>
 					<section>
 						<h2>Docker Engine</h2>
-						<img width="50%" height="50%" data-src="./images/docker.png" alt="Docker Engine">
+						<img width="50%" data-src="./images/Engine.png" alt="Docker Engine">
 					</section>
 					<section>
 						<h4>Installations</h2>
@@ -96,29 +98,28 @@
 					</section>
 					<section>
 						<h4>Docker installation<br/>Based on ubuntu:trusty</h4>
-						<p><img width="10%" height="10%" data-src="./images/ubuntu.png" alt="ubuntu"></p>
+						<img width="15%" data-src="./images/ubuntu.png" alt="ubuntu">
 						<ul>
 							<li>Image:
 								<a href="https://hub.docker.com/r/jhipster/jhipster/" target="_blank">jhipster/jhipster</a>
 							</li>
-							<li>generator-jhipster:
+							<li>
 								<a href="https://github.com/jhipster/generator-jhipster/blob/master/Dockerfile" target="_blank">Dockerfile</a>
 							</li>
 							<ul>
-								<li>git</li>
-								<li>java 8</li>
-								<li>node 4 + npm</li>
-								<li>yeoman, bower, gulp</li>
-								<li>wget, curl, vim, etc.</li>
+								<small>
+									<li>git</li>
+									<li>java 8</li>
+									<li>node 4 + npm</li>
+									<li>yeoman, bower, gulp</li>
+									<li>wget, curl, vim, etc.</li>
+								</small>
 							</ul>
 						</ul>
 					</section>
 					<section>
-						<h4>How to install</h4>
+						<h4>How to install ?</h4>
 						<pre><code>docker pull jhipster/jhipster</code></pre>
-						<p>
-							put archi here...
-						</p>
 					</section>
 					<section data-markdown>
 						<script type="text/template">
@@ -167,35 +168,40 @@
 					</section>
 					<section>
 						<h2>Demo (1/3)</h2>
+						TODO...
+					</section>
+					<section>
+						<h2>Demo (1/3)</h2>
 						Create a JHipster project with Cassandra as database
-						<pre><code data-trim>{
+						<pre><code>yo jhipster</code></pre>
+						<pre><code>{
   "generator-jhipster": {
-	"jhipsterVersion": "3.0.0",
-	"baseName": "jhipster",
-	"packageName": "com.mycompany.myapp",
-	"packageFolder": "com/mycompany/myapp",
-	"serverPort": "8080",
-	"authenticationType": "session",
-	"hibernateCache": "no",
-	"clusteredHttpSession": "no",
-	"websocket": "no",
-	"databaseType": "cassandra",
-	"devDatabaseType": "cassandra",
-	"prodDatabaseType": "cassandra",
-	"searchEngine": "no",
-	"buildTool": "maven",
-	"enableSocialSignIn": false,
-	"rememberMeKey": "722f133a8480120ddc4436f084776036db6958b2",
-	"useSass": false,
-	"applicationType": "monolith",
-	"testFrameworks": [
-	  "gatling"
-	],
-	"enableTranslation": true,
-	"nativeLanguage": "en",
-	"languages": [
-	  "en"
-	]
+    "jhipsterVersion": "3.0.0",
+    "baseName": "jhipster",
+    "packageName": "com.mycompany.myapp",
+    "packageFolder": "com/mycompany/myapp",
+    "serverPort": "8080",
+    "authenticationType": "session",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "cassandra",
+    "devDatabaseType": "cassandra",
+    "prodDatabaseType": "cassandra",
+    "searchEngine": "no",
+    "buildTool": "maven",
+    "enableSocialSignIn": false,
+    "rememberMeKey": "722f133a8480120ddc4436f084776036db6958b2",
+    "useSass": false,
+    "applicationType": "monolith",
+    "testFrameworks": [
+      "gatling"
+    ],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ]
   }
 }</code></pre>
 					</section>
@@ -206,17 +212,20 @@
 				<section>
 					<section>
 						<h2>Docker Compose</h2>
-						<img width="30%" data-src="./images/logo-title-final-compose-2b.png" alt="Docker Compose">
+						<img width="50%" data-src="./images/Compose.png" alt="Docker Compose">
 					</section>
 					<section>
 						<h4>After generating a JHipster project</h4>
 						<ul>
-							<li>Folder src/main/docker</li>
+							<li>In folder src/main/docker</li>
 							<ul>
-								<li>app.yml</li>
-								<li>Dockerfile</li>
 								<li>elasticsearch.yml</li>
+								<li>cassandra-opscenter.yml</li>
+								<li>cassandra.yml</li>
+								<li>mongodb-cluster.yml</li>
+								<li>mongodb.yml</li>
 								<li>mysql.yml</li>
+								<li>postgresql.yml</li>
 								<li>sonar.yml</li>
 							</ul>
 						</ul>
@@ -263,24 +272,24 @@
 						            - 9092:9092
 						```
 
-						To start Sonar
+						To start Sonar:
 						```
 						docker-compose -f src/main/docker/sonar.yml up
 						```
 
-						To launch a Sonar Analyze
+						To launch a Sonar analyze:
 						```
 						mvn sonar:sonar
 						```
 						</script>
 					</section>
 					<section>
-						<h4>Thanks to Travis CI</h4>
+						<h4>Thanks to <a href="https://travis-ci.org/" target="_blank">Travis CI</a></h4>
 						<img width="10%" height="10%" data-src="./images/travis-ci.png" alt="Travis CI">
 						<br/>
 						<p>
 							<a href="https://travis-ci.org/jhipster/generator-jhipster" target="_blank">
-								https://travis-ci.org/jhipster/generator-jhipster
+								<small>https://travis-ci.org/jhipster/generator-jhipster</small>
 							</a>
 							<img data-src="./images/jhipster-travis.png" alt="JHipster Travis">
 						</p>
@@ -291,7 +300,7 @@
 				<section>
 					<section>
 						<h2>Docker Hub</h2>
-						<img data-src="./images/docker-hub.png" alt="Docker Hub">
+						<img width="50%" data-src="./images/docker_hub_banner_image_0.png" alt="Docker Hub">
 					</section>
 					<section>
 						<h2>JHipster Organization</h2>
@@ -299,10 +308,24 @@
 						<img data-src="./images/jhipster-organization.png" alt="Docker Hub">
 					</section>
 					<section>
-						<h4>Next...</h4>
+						<h4>Coming soon...</h4>
+						<table>
+		                    <tbody>
+			                    <tr>
+			                        <td align="center"><img width="100px" data-src="./images/docker-hub.png" alt="?"><br/><small>sample app</small></td>
+									<td align="center"><img width="100px" height="100px" data-src="./images/docker-hub.png" alt="?"><br/><small>gradle</small></td>
+									<td align="center"><img width="100px" height="100px" data-src="./images/docker-hub.png" alt="?"><br/><small>mongodb</small></td>
+									<td align="center"><img width="100px" height="100px" data-src="./images/docker-hub.png" alt="?"><br/><small>cassandra</small></td>
+									<td align="center"><img width="100px" height="100px" data-src="./images/docker-hub.png" alt="?"><br/><small>elasticsearch</small></td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h4>Coming soon...</h4>
 						<p>
-						<img width="30%" height="30%" data-src="./images/logo-title-final-registry-2-907x1024.png" alt="Docker Hub">
-						<img width="30%" height="30%" data-src="./images/logo-title-final-swarm-2d-219x300.png" alt="Docker Hub">
+							<img width="30%" data-src="./images/logo-title-final-swarm-2d-219x300.png" alt="Docker Hub">
+							<img width="50%" data-src="./images/cluster.jpg-large" alt="jhipster cluster">
 						</p>
 					</section>
 				</section>
@@ -310,8 +333,12 @@
 				<!------------------------------------------------------------->
 				<section>
 					<section>
-						<h1>Demo with</h1>
+						<h2>Demo (3/3)</h2>
 						<img data-src="./images/cassandra.png" alt="Cassandra">
+					</section>
+					<section>
+						<h4>Goal</h4>
+						TODO...
 					</section>
 					<section>
 						Create a simple entity: meetup
@@ -332,8 +359,8 @@
     "service": "no",
     "entityTableName": "meetup"
 }</code></pre>
-						Run the application in production profile
-						<pre><code>mvn -Pprod</code></pre>
+					Package the application
+					<pre><code>./mvnw package -Pprod -DskipTests=true</code></pre>
 					</section>
 					<section data-markdown>
 						List folder:
@@ -346,7 +373,7 @@
 						docker-compose -f src/main/docker/cassandra-opscenter.yml build
 						```
 
-						Launch Cassandra and Opscenter:
+						Launch Cassandra and OpsCenter:
 						```
 						docker-compose -f src/main/docker/cassandra-opscenter.yml up
 						```
@@ -359,7 +386,8 @@
 						docker exec -it jhipster-cassandra ls -l
 						```
 						```
-						docker exec -it jhipster-cassandra cqlsh -k jhipster -e "select * from user;"
+						docker exec -it jhipster-cassandra \
+						cqlsh -k jhipster -e "select * from user;"
 						```
 
 						Check docker_jhipster-cassandra-node_1 (1st time):
@@ -367,13 +395,14 @@
 						docker exec -it docker_jhipster-cassandra-node_1 ls -l
 						```
 						```
-						docker exec -it docker_jhipster-cassandra-node_1 cqlsh -k jhipster -e "select * from user;"
+						docker exec -it docker_jhipster-cassandra-node_1 \
+						cqlsh -k jhipster -e "select * from user;"
 						```
 					</section>
 					<section data-markdown>
 						Copy cql files:
 						```
-						docker cp src/main/ressources/config/cql jhipster-cassandra:/
+						docker cp src/main/resources/config/cql jhipster-cassandra:/
 						```
 
 						Initialize the database with default schema:
@@ -392,16 +421,28 @@
 						docker exec -it jhipster-cassandra ls -l
 						```
 						```
-						docker exec -it jhipster-cassandra cqlsh -k jhipster -e "select * from user;"
+						docker exec -it jhipster-cassandra \
+						cqlsh -k jhipster -e "select * from user;"
 						```
 
 						Check docker_jhipster-cassandra-node_1 (2nd time):
 						```
-						docker exec -it docker_jhipster-cassandra-node_1 ls -l
+						docker exec -it jhipster-cassandra ls -l
 						```
 						```
-						docker exec -it docker_jhipster-cassandra-node_1 cqlsh -k jhipster -e "select * from user;"
+						docker exec -it docker_jhipster-cassandra-node_1 \
+						cqlsh -k jhipster -e "select * from user;"
 						```
+					</section>
+					<section data-markdown>
+						Run the application in production profile
+						```
+						java -jar target/*.war --spring.profiles.active=prod
+						```
+
+						Go to [http://localhost:8080](http://localhost:8080)
+
+						Add new meetups
 					</section>
 					<section data-markdown>
 						Add a new node:
@@ -420,17 +461,16 @@
 						```
 						docker ps
 						```
-
 					</section>
 					<section data-markdown>
-						Get IPs of containers
+						Check docker_jhipster-cassandra-node_2:
 						```
-						docker inspect --format '{{ .NetworkSettings.Networks.docker_default.IPAddress }}' $(docker ps -q)
+						docker exec -it docker_jhipster-cassandra-node_2 \
+						cqlsh -k jhipster -e "select * from user;"
 						```
-
-						Start application in production profiles:
 						```
-						java -jar target/*.war --spring.data.cassandra.contact-points="172.20.0.3,172.20.0.4,172.20.0.5,172.20.0.6" --spring.profiles.active="prod"
+						docker exec -it docker_jhipster-cassandra-node_2 \
+						cqlsh -k jhipster -e "select * from meetup;"
 						```
 					</section>
 				</section>
