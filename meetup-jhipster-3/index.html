@@ -42,6 +42,7 @@
 					<br/><br/>
 					<h2>Pascal GRIMAUD</h2>
 					<p>Java EE Consultant</p>
+					<p>Open Source Developer</p>
 					<p>Docker enthusiast</p>
 					<br/>
 					<p>
@@ -66,7 +67,13 @@
 				<!-- titre du meetup -->
 				<section>
 					<h1>JHipster & Docker</h1>
-					<img height="180px" data-src="./images/logo-jhipster2x.png" alt=""><img data-src="./images/docker-birthday.png" alt="">
+					<p>
+						<img height="180px" data-src="./images/logo-jhipster2x.png" alt="">
+						<img data-src="./images/docker-birthday.png" alt="">
+					</p>
+					<p>
+						<small><a href="http://pascalgrimaud.github.io/meetup-jhipster-3/" target="_blank">pascalgrimaud.github.io/meetup-jhipster-3</a></small>
+					</p>
 				</section>
 
 				<!------------------------------------------------------------->
@@ -123,29 +130,6 @@
 					</section>
 					<section data-markdown>
 						<script type="text/template">
-							## Use cases
-
-							Use JHipster v2.27.2
-							```
-							docker run --rm -it -v $(pwd):/home/jhipster/app \
-							  -v ~/.m2:/home/jhipster/.m2 jhipster/jhipster:v2.27.2 yo jhipster
-							```
-
-							Use JHipster v3.0.0
-							```
-							docker run --rm -it -v $(pwd):/home/jhipster/app \
-							  -v ~/.m2:/home/jhipster/.m2 jhipster/jhipster:v3.0.0 yo jhipster
-							```
-
-							Use JHipster master
-							```
-							docker run --rm -it -v $(pwd):/home/jhipster/app \
-							  -v ~/.m2:/home/jhipster/.m2 jhipster/jhipster:master yo jhipster
-							```
-						</script>
-					</section>
-					<section data-markdown>
-						<script type="text/template">
 							## Demo (1/3)
 
 							Create folder
@@ -156,7 +140,7 @@
 							Start a JHipster container
 							```
 							docker run --name jhipster \
-							  -v $(pwd):/home/jhipster/app -v ~/.m2:/home/jhipster/.m2 \
+							  -v "$PWD":/home/jhipster/app -v ~/.m2:/home/jhipster/.m2 \
 							  -d -t jhipster/jhipster
 							```
 
@@ -165,10 +149,6 @@
 							docker exec -it jhipster bash
 							```
 						</script>
-					</section>
-					<section>
-						<h2>Demo (1/3)</h2>
-						[TODO]
 					</section>
 					<section>
 						<h2>Demo (1/3)</h2>
@@ -205,7 +185,29 @@
   }
 }</code></pre>
 					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Use cases
 
+							Use JHipster v2.27.2
+							```
+							docker run --rm -it -v "$PWD":/home/jhipster/app \
+							  -v ~/.m2:/home/jhipster/.m2 jhipster/jhipster:v2.27.2 yo jhipster
+							```
+
+							Use JHipster v3.0.0
+							```
+							docker run --rm -it -v "$PWD":/home/jhipster/app \
+							  -v ~/.m2:/home/jhipster/.m2 jhipster/jhipster:v3.0.0 yo jhipster
+							```
+
+							Use JHipster master
+							```
+							docker run --rm -it -v "$PWD":/home/jhipster/app \
+							  -v ~/.m2:/home/jhipster/.m2 jhipster/jhipster:master yo jhipster
+							```
+						</script>
+					</section>
 				</section>
 
 				<!------------------------------------------------------------->
@@ -337,10 +339,6 @@
 						<img data-src="./images/cassandra.png" alt="Cassandra">
 					</section>
 					<section>
-						<h4>Goal</h4>
-						[TODO]
-					</section>
-					<section>
 						Create a simple entity: meetup
 						<pre><code data-trim>{
     "relationships": [],
@@ -451,16 +449,12 @@
 						scale jhipster-cassandra-node=2
 						```
 
-						Add another node:
-						```
-						docker-compose -f src/main/docker/cassandra-opscenter.yml \
-						scale jhipster-cassandra-node=3
-						```
-
 						Check docker container:
 						```
 						docker ps
 						```
+
+						Wait and check OpsCenter [http://localhost:8080](http://localhost:8080)
 					</section>
 					<section data-markdown>
 						Check docker_jhipster-cassandra-node_2:
@@ -473,6 +467,21 @@
 						cqlsh -k jhipster -e "select * from meetup;"
 						```
 					</section>
+					<section data-markdown>
+						Stop docker_jhipster-cassandra-node_1:
+						```
+						docker stop docker_jhipster-cassandra-node_1
+						```
+
+						Go to localhost:8080 and add/update meetups
+
+						Check OpsCenter [http://localhost:8080](http://localhost:8080)
+
+						Then, restart node_1
+						```
+						docker stop docker_jhipster-cassandra-node_1
+						```
+					</section>
 				</section>
 
 				<!-- fin -->
@@ -481,15 +490,11 @@
 		                <small>Thank you</small>
 		            </h1>
 		            <img width="30%" height="30%" data-src="./images/to_be_continued.png" alt="to_be_continued">
-		            <p>
-		                <small><a href="https://github.com/hakimel/reveal.js" target="_blank">Reveal.js </a> - The HTML
-		                    Presentation Framework
-		                </small>
-		            </p>
+					<p>
+						<small><a href="http://pascalgrimaud.github.io/meetup-jhipster-3/" target="_blank">pascalgrimaud.github.io/meetup-jhipster-3</a></small>
+					</p>
 		        </section>
-
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
