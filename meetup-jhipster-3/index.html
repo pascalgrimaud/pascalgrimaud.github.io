@@ -387,6 +387,10 @@
 						docker exec -it jhipster-cassandra \
 						cqlsh -k jhipster -e "select * from user;"
 						```
+						```
+						docker exec -it jhipster-cassandra \
+						cqlsh -k jhipster -e "select * from meetup;"
+						```
 
 						Check docker_jhipster-cassandra-node_1 (1st time):
 						```
@@ -395,6 +399,10 @@
 						```
 						docker exec -it docker_jhipster-cassandra-node_1 \
 						cqlsh -k jhipster -e "select * from user;"
+						```
+						```
+						docker exec -it docker_jhipster-cassandra-node_1 \
+						cqlsh -k jhipster -e "select * from meetup;"
 						```
 					</section>
 					<section data-markdown>
@@ -422,6 +430,10 @@
 						docker exec -it jhipster-cassandra \
 						cqlsh -k jhipster -e "select * from user;"
 						```
+						```
+						docker exec -it jhipster-cassandra \
+						cqlsh -k jhipster -e "select * from meetup;"
+						```
 
 						Check docker_jhipster-cassandra-node_1 (2nd time):
 						```
@@ -430,6 +442,10 @@
 						```
 						docker exec -it docker_jhipster-cassandra-node_1 \
 						cqlsh -k jhipster -e "select * from user;"
+						```
+						```
+						docker exec -it docker_jhipster-cassandra-node_1 \
+						cqlsh -k jhipster -e "select * from meetup;"
 						```
 					</section>
 					<section data-markdown>
@@ -454,7 +470,7 @@
 						docker ps
 						```
 
-						Wait and check OpsCenter [http://localhost:8080](http://localhost:8080)
+						Wait and check OpsCenter [http://localhost:8888](http://localhost:8888)
 					</section>
 					<section data-markdown>
 						Check docker_jhipster-cassandra-node_2:
@@ -468,19 +484,21 @@
 						```
 					</section>
 					<section data-markdown>
-						Stop docker_jhipster-cassandra-node_1:
+						Stop jhipster-cassandra:
 						```
-						docker stop docker_jhipster-cassandra-node_1
+						docker stop jhipster-cassandra
 						```
 
-						Go to localhost:8080 and add/update meetups
+						Go to [http://localhost:8080](http://localhost:8080) and add/update meetups
 
-						Check OpsCenter [http://localhost:8080](http://localhost:8080)
+						Wait and check OpsCenter [http://localhost:8888](http://localhost:8888)
 
-						Then, restart node_1
+						Then, restart jhipster-cassandra
 						```
-						docker stop docker_jhipster-cassandra-node_1
+						docker start jhipster-cassandra
 						```
+
+						Wait and check OpsCenter [http://localhost:8888](http://localhost:8888)
 					</section>
 				</section>
 
