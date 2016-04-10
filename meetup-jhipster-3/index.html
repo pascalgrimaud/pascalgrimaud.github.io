@@ -48,17 +48,17 @@
 					<p>
 						<small>Contact:</small>
 						<br/>
-						<a href="https://www.linkedin.com/in/pascalgrimaud" target="_blank" title="linkedin">
-							<img height="48px" data-src="./images/linkedin.png" alt="">
-						</a>
-						<a href="http://www.viadeo.com/fr/profile/pascal.grimaud" target="_blank" title="viadeo">
-							<img height="48px" data-src="./images/viadeo.jpg" alt="">
-						</a>
 						<a href="https://twitter.com/pascalgrimaud" target="_blank" title="twitter">
 							<img height="48px" data-src="./images/twitter.jpg" alt="">
 						</a>
 						<a href="https://github.com/pascalgrimaud/" target="_blank" title="github">
 							<img height="48px" data-src="./images/github.png" alt="">
+						</a>
+						<a href="https://www.linkedin.com/in/pascalgrimaud" target="_blank" title="linkedin">
+							<img height="48px" data-src="./images/linkedin.png" alt="">
+						</a>
+						<a href="http://www.viadeo.com/fr/profile/pascal.grimaud" target="_blank" title="viadeo">
+							<img height="48px" data-src="./images/viadeo.jpg" alt="">
 						</a>
 					</p>
 				</section>
@@ -339,6 +339,10 @@
 						<img data-src="./images/cassandra.png" alt="Cassandra">
 					</section>
 					<section>
+						<h4>Architecture</h4>
+						<img data-src="./images/cassandra_demo.png" alt="cassandra demo">
+					</section>
+					<section>
 						Create a simple entity: meetup
 						<pre><code data-trim>{
     "relationships": [],
@@ -489,16 +493,23 @@
 						docker stop jhipster-cassandra
 						```
 
-						Go to [http://localhost:8080](http://localhost:8080) and add/update meetups
-
 						Wait and check OpsCenter [http://localhost:8888](http://localhost:8888)
 
+						Go to [http://localhost:8080](http://localhost:8080) and add/update meetups
+					</section>
+					<section data-markdown>
 						Then, restart jhipster-cassandra
 						```
 						docker start jhipster-cassandra
 						```
 
 						Wait and check OpsCenter [http://localhost:8888](http://localhost:8888)
+
+						Check jhipster-cassandra (3rd time):
+						```
+						docker exec -it jhipster-cassandra \
+						cqlsh -k jhipster -e "select * from meetup;"
+						```
 					</section>
 				</section>
 
