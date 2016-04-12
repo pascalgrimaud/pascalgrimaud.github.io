@@ -510,6 +510,11 @@
 						docker exec -it jhipster-cassandra \
 						cqlsh -k jhipster -e "select * from meetup;"
 						```
+
+						If needed, repair the node:
+						```
+						docker exec -it jhipster-cassandra nodetool repair
+						```
 					</section>
 				</section>
 
