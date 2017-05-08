@@ -65,7 +65,7 @@
 
 				<section>
 					<section>
-						<h2>DevOps</h2>
+						<h1>DevOps</h1>
 						<img src="images/devops.jpg">
 					</section>
 					<section>
@@ -80,17 +80,34 @@
 									<li>JDL Studio, entity</li>
 								</ul>
 							</small>
+						</ul>
+					</section>
+					<section>
+						<p>
+							<img height="160px" src="images/devops.jpg">
+						</p>
+						<ul>
 							<li>Code</li>
 							<small>
 								<ul>
-									<li>IDE, Shell Plugins (oh-my-zsh), DevBox (Vagrant)</li>
+									<li>DevBox (Vagrant)</li>
+									<li>Configuration IDE</li>
+									<li>Shell Plugins (oh-my-zsh)</li>
 									<li>docker-compose files</li>
 								</ul>
+							</small>
+						</ul>
+					</section>
+					<section>
+						<p>
+							<img height="160px" src="images/devops.jpg">
+						</p>
+						<ul>
 							</small>
 							<li>Build & Test</li>
 							<small>
 								<ul>
-									<li>cicd: Jenkins, Travis CI, GitLab CI, CircleCI</li>
+									<li>Continous integration: Jenkins2, Travis CI, GitLab CI, CircleCI</li>
 									<li>SonarQube</li>
 								</ul>
 							</small>
@@ -104,11 +121,18 @@
 							<li>Release & Deploy</li>
 							<small>
 								<ul>
-									<li>Heroku, Cloud Foundry, Amazon Web Services, Docker</li>
+									<li>Heroku, Cloud Foundry, Amazon Web Services, Docker Registry</li>
 									<li>Kubernetes, Rancher (BETA)</li>
-									<li>OpenShift, Mesos Marathon (Coming soon...)</li>
+									<li>OpenShift, Mesos Marathon (coming soon...)</li>
 								</ul>
 							</small>
+						</ul>
+					</section>
+					<section>
+						<p>
+							<img height="160px" src="images/devops.jpg">
+						</p>
+						<ul>
 							<li>Operate & Monitor</li>
 							<small>
 								<ul>
@@ -121,25 +145,137 @@
 				</section>
 
 				<section>
-					<h2>Description and some stats</h2>
-					<ul>
-						<li>Open Source</li>
-						<li>+320 contributors</li>
-						<li>+6600 stargazers</li>
-						<li>1/2 million installations</li>
-						<li>More than 150 companies using JHipster</li>
-					</ul>
+					<section>
+						<h1>Development</h1>
+						<ul>
+							<li>Installation with Vagrant</li>
+							<li>Installation with Docker</li>
+							<li>Docker Compose</li>
+						</ul>
+					</section>
+					<section>
+						<p>
+							<img height="150px" src="images/vagrant.png">
+						</p>
+						<ul>
+							<li>Based on bento/ubuntu-16.04</li>
+							<small>
+								<ul>
+									<li>NodeJS, NPM, Yarn, bower, gulp, generator-jhipster, jhipster-uml</li>
+									<li>chromium, mysql-workbench, pgadmin3</li>
+									<li>IntelliJ IDEA, Visual Studio Code</li>
+									<li>docker, docker-compose</li>
+								</ul>
+							</small>
+							<li>Installation</li>
+							<pre><code>vagrant init jhipster/jhipster-devbox
+vagrant up --provider virtualbox</code></pre>
+						</ul>
+					</section>
+					<section>
+						<p>
+							<img height="200px" src="images/docker_logo.png">
+						</p>
+						<ul>
+							<li>Based on ubuntu:xenial</li>
+							<small>
+								<ul>
+									<li>NodeJS, NPM, Yarn, bower, gulp, generator-jhipster, jhipster-uml</li>
+									<li>chromium, mysql-workbench, pgadmin3</li>
+									<li>IntelliJ IDEA, Visual Studio Code</li>
+									<li>docker, docker-compose</li>
+								</ul>
+							</small>
+							<li>Installation</li>
+							<pre><code>docker pull jhipster/jhipster</code></pre>
+						</ul>
+					</section>
+					<section>
+						<p>
+							<img height="200px" src="images/docker-compose.png">
+						</p>
+						<ul>
+							<li>Docker-Compose files for</li>
+							<small>
+								<ul>
+									<li>MySQL, PostgreSQL, MariaDB, Oracle, Microsoft SQL Server</li>
+									<li>MongoDB, Cassandra</li>
+									<li>Elasticsearch, Kafka</li>
+									<li>SonarQube</li>
+									<li>JHipster Registry, Consul</li>
+								</ul>
+							</small>
+							<li>Launch a service</li>
+							<pre><code>docker-compose \
+  -f src/main/docker/"service".yml up</code></pre>
+						</ul>
+					</section>
 				</section>
 
 				<section>
-					<ul>
-						<h3>News</h3>
-						<li><a href="https://jhipster.github.io">https://jhipster.github.io</a></li>
-						<li>Twitter: <a href="https://twitter.com/java_hipster">@java_hipster</a></li>
+					<section>
+						<h2>Continuous Integration</h2>
+						<ul>
+							<li>Jenkins2</li>
+							<li>GitLab CI</li>
+							<li>Travis CI</li>
+							<li>CircleCI</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Demo with</h2>
+						<p>
+							<img height="150px" src="images/jenkins.png">
+						</p>
+					</section>
+					<section>
+						<h3>Result with Jenkins2</h2>
+						<p>
+							<img src="images/jenkins2_result.png">
+						</p>
+					</section>
+					<section>
+						<h3>Demo with</h2>
+						<p>
+							<img height="200px" src="images/gitlab.png">
+						</p>
+					</section>
+					<section>
+						<h3>Result with GitLab</h2>
+						<p>
+							<img src="images/gitlab_result.png">
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Deployment</h1>
+						<img height="100px" src="images/cf.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height="100px" src="images/heroku.svg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height="100px" src="images/aws.svg">
 						<br/>
-						<h3>Paris JHipster User Group</h3>
-						<li><a href="https://www.meetup.com/fr-FR/JHipster-User-Group/">https://www.meetup.com/fr-FR/JHipster-User-Group/</a></li>
-					</ul>
+						<img height="100px" src="images/docker.svg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height="120px" src="images/kubernetes.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height="100px" src="images/rancher.jpg">
+					</section>
+					<section>
+						<img height="100px" src="images/heroku.svg"><br/>
+						<img src="images/heroku_stack.png">
+					</section>
+					<section>
+						<img height="70px" src="images/rancher.jpg"><br/>
+						<img src="images/rancher_stack.png">
+					</section>
+					<section>
+						<img src="images/kubernetes.png"><br/>
+						<img src="images/kubernetes_stack.png">
+					</section>
+				</section>
+
+				<section>
+					<h2>THANK YOU</h2>
+					<img height="160px" src="images/thanks.jpg">
+					<p>Slides available at:</p>
+					<p>
+						<a href="https://pascalgrimaud.github.io/jhipster-parisjug">pascalgrimaud.github.io/jhipster-parisjug</a>
+					</p>
 				</section>
 			</div>
 		</div>
