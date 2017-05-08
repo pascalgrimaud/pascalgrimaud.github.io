@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JHipster ParisJUG</title>
+		<meta name="description" content="JHipster ParisJUG">
+		<meta name="author" content="Pascal Grimaud">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="css/star.css">
+		<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="node_modules/material-design-icons/iconfont/material-icons.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<a href="https://www.parisjug.org/" target="_blank" title="parisjug">
+						<img data-src="./images/logoparisjug.jpg" alt="">
+					</a>
+					<h1>DevOps & JHipster</h1>
+					<p><small>May 9th, 2017</small></p>
+					<a href="https://jhipster.github.io" target="_blank" title="jhipster">
+						<img height="250px" data-src="./images/JhipsterTravis.png" alt="">
+					</a>
+				</section>
+
+				<section>
+					<h2>Pascal GRIMAUD</h2>
+					<p>Java Consultant</p>
+					<p>
+						<a href="https://www.ippon.fr" target"_blank" title="ippon">
+							<img height="96px" data-src="./images/logo_HD_300dpi_black-2141.png" alt="">
+						</a>
+					</p>
+					<p>Open Source Developer</p>
+					<p><a href="https://twitter.com/pascalgrimaud" target="_blank" title="twitter">@pascalgrimaud</a></p>
+					<p>
+						<a href="https://twitter.com/pascalgrimaud" target="_blank" title="twitter">
+							<img height="48px" data-src="./images/twitter.jpg" alt="">
+						</a>
+						<a href="https://github.com/pascalgrimaud/" target="_blank" title="github">
+							<img height="48px" data-src="./images/github.png" alt="">
+						</a>
+						<a href="https://www.linkedin.com/in/pascalgrimaud" target="_blank" title="linkedin">
+							<img height="48px" data-src="./images/linkedin.png" alt="">
+						</a>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>DevOps</h2>
+						<img src="images/devops.jpg">
+					</section>
+					<section>
+						<p>
+							<img height="160px" src="images/devops.jpg">
+						</p>
+						<ul>
+							<li>Plan</li>
+							<small>
+								<ul>
+									<li>generator-jhipster: client, server, service, languages</li>
+									<li>JDL Studio, entity</li>
+								</ul>
+							</small>
+							<li>Code</li>
+							<small>
+								<ul>
+									<li>IDE, Shell Plugins (oh-my-zsh), DevBox (Vagrant)</li>
+									<li>docker-compose files</li>
+								</ul>
+							</small>
+							<li>Build & Test</li>
+							<small>
+								<ul>
+									<li>cicd: Jenkins, Travis CI, GitLab CI, CircleCI</li>
+									<li>SonarQube</li>
+								</ul>
+							</small>
+						</ul>
+					</section>
+					<section>
+						<p>
+							<img height="160px" src="images/devops.jpg">
+						</p>
+						<ul>
+							<li>Release & Deploy</li>
+							<small>
+								<ul>
+									<li>Heroku, Cloud Foundry, Amazon Web Services, Docker</li>
+									<li>Kubernetes, Rancher (BETA)</li>
+									<li>OpenShift, Mesos Marathon (Coming soon...)</li>
+								</ul>
+							</small>
+							<li>Operate & Monitor</li>
+							<small>
+								<ul>
+									<li>JHipster Console: Elasticsearch, Logstash, Kibana</li>
+									<li>Alerter, ZipKin</li>
+								</ul>
+							</small>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h2>Description and some stats</h2>
+					<ul>
+						<li>Open Source</li>
+						<li>+320 contributors</li>
+						<li>+6600 stargazers</li>
+						<li>1/2 million installations</li>
+						<li>More than 150 companies using JHipster</li>
+					</ul>
+				</section>
+
+				<section>
+					<ul>
+						<h3>News</h3>
+						<li><a href="https://jhipster.github.io">https://jhipster.github.io</a></li>
+						<li>Twitter: <a href="https://twitter.com/java_hipster">@java_hipster</a></li>
+						<br/>
+						<h3>Paris JHipster User Group</h3>
+						<li><a href="https://www.meetup.com/fr-FR/JHipster-User-Group/">https://www.meetup.com/fr-FR/JHipster-User-Group/</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
