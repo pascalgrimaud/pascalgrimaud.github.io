@@ -50,6 +50,123 @@
 						</a>
 					</p>
 				</section>
+				<section>
+					<h1>Summary</h1>
+					<img data-src="./images/devops.png" alt="">
+					<ul>
+						<li>JHipster Continuous Integration</li>
+						<li>How JHipster can help DevOps team ?</li>
+					</ul>
+				</section>
+				<section>
+					<h1>JHipster Continuous Integration</h1>
+					<ul>
+						<li>What do we use ?</li>
+						<li>What happens when someone summits a PR ?</li>
+						<li>What happens when it's merged into master ?</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Travis</h2>
+					<ul>
+						<li>Travis is free for Open Source</li>
+						<li>Each push will trigger: 15 builds</li>
+						<li>More than 12200 builds since 2013 just for generator-jhipster</li>
+					</ul>
+				</section>
+				<section data-markdown>
+					## What do we need to test ?
+
+					- the generator him self
+					- the installation of tools: node, yarn, java, git, etc.
+					- the generated application
+						- backend tests
+						- frontend tests
+						- e2e tests
+				</section>
+				<section data-markdown>
+					## Hard to test everything
+
+					- front: angular / react
+					- back: maven / gradle
+					- security: jwt, oauth2, session
+					- css: sass
+					- cache: no l2,
+					- database: mysql, mariadb postgresql, mongodb, cassandra, couchbase
+					- option: kafka, elasticsearch, websocket
+					- microservices: eureka, consul, uaa, oauth2
+
+					- lot of options: more than 20000 different configs
+					- if you think about entities, it will be more / more
+				</section>
+				<section data-markdown>
+					## Daily builds
+
+					hipster-labs
+					- Docker
+					- Maven
+					- Gradle
+					- Microservices
+					- React
+				</section>
+				<section data-markdown>
+					## Tips for contributor
+
+					As contributor, you can have your own Travis builds
+					The workflow:
+					- work on your fork
+					- push in a branch to your work
+					- a Travis builds will be trigger in your Travis
+					- if everything passed, you can pull request
+				</section>
+				<section data-markdown>
+					## SonarCloud
+
+					There is a Sonar analyze on SonarCloud, including Typescript
+				</section>
+				<section data-markdown>
+					## Docker Hub
+
+					A new Docker image is generated: jhipster/jhipster
+					- master
+					- latest
+					- vX.X.X
+					Other Docker images
+				</section>
+				<section data-markdown>
+					## Resume
+
+					Schema
+				</section>
+				<section data-markdown>
+					## Road map
+				</section>
+				<section data-markdown>
+					### Use other free CI
+
+					Include CircleCI to increase the number of builds
+					SnapCI, etc
+					AppVeyor to test JHipster with Windows
+				</section>
+				<section data-markdown>
+					### More analyze
+
+					SonarCloud organization: more
+				</section>
+				<section data-markdown>
+					### Other tests
+
+					Docker compose, Kubernetes
+				</section>
+				<section data-markdown>
+					## Continuous Deployment
+
+					Automate:
+					- the generation on jhipster-sample-app-X
+					- DevBox ?
+
+					Any ideas are welcome
+				</section>
 			</div>
 		</div>
 
@@ -61,6 +178,7 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				transition: 'convex',
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
