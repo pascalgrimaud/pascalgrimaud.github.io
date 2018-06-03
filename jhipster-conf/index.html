@@ -5,6 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<title>JHipster Conf</title>
+		<meta name="description" content="JHipster Conf">
+		<meta name="author" content="Pascal Grimaud">
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css">
@@ -67,67 +69,69 @@
 					</ul>
 				</section>
 				<section>
-					<a>
-						<img height="144px" data-src="./images/Travis-CI.png" alt="">
-					</a>
-					<ul>
-						<li>Travis is free for Open Source</li>
-						<li>Each push will trigger 15 builds</li>
-						<li>More than 12200 builds since 2013 just for generator-jhipster</li>
-					</ul>
-				</section>
-				<section>
-					<h3>What do we need to test ?</h3>
-					<ul>
-						<li>the generator him self</li>
-						<li>the installation of tools:<br/>
-							<img height="64px" data-src="./images/nodejs.png" alt=""><img height="64px" data-src="./images/java.jpg" alt=""><img height="64px" data-src="./images/yarn.jpg" alt=""><img height="48px" data-src="./images/git.png" alt=""></li>
-						<li>the generated application</li>
+					<section>
+						<a>
+							<img height="144px" data-src="./images/Travis-CI.png" alt="">
+						</a>
 						<ul>
-							<li>backend tests</li>
-							<li>frontend tests</li>
-							<li>end-to-end tests</li>
+							<li>Travis is free for Open Source</li>
+							<li>Each push will trigger 15 builds</li>
+							<li>More than 12200 builds since 2013</li>
 						</ul>
-					</ul>
-				</section>
-				<section>
-					<h4>Hard to test everything</h4>
-					<small>
+					</section>
+					<section>
+						<h3>What do we need to test ?</h3>
 						<ul>
-							<li>front: angular / react</li>
-							<li>back: maven / gradle</li>
-							<li>security: jwt, oauth2, session</li>
-							<li>css: sass</li>
-							<li>cache: no l2</li>
-							<li>database: mysql, mariadb postgresql, mongodb, cassandra, couchbase</li>
-							<li>option: kafka, elasticsearch, websocket</li>
-							<li>microservices: eureka, consul, uaa, oauth2</li>
-							<br/>
-							<li>lot of options: more than 20000 different configs</li>
-							<li>if you think about entities, it will be more / more</li>
+							<li>the generator him self</li>
+							<li>the installation of tools:<br/>
+								<img height="64px" data-src="./images/nodejs.png" alt=""><img height="64px" data-src="./images/java.jpg" alt=""><img height="64px" data-src="./images/yarn.jpg" alt=""><img height="48px" data-src="./images/git.png" alt=""></li>
+							<li>the generated application</li>
+							<ul>
+								<li>backend tests</li>
+								<li>frontend tests</li>
+								<li>end-to-end tests</li>
+							</ul>
 						</ul>
-					</small>
-				</section>
-				<section data-markdown>
-					## Daily builds
+					</section>
+					<section>
+						<h3>Hard to test everything</h3>
+						<small>
+							<ul>
+								<li>front: Angular / React</li>
+								<li>back: maven / gradle</li>
+								<li>security: jwt, oauth2, session</li>
+								<li>css: sass</li>
+								<li>cache: no l2</li>
+								<li>database: mysql, mariadb postgresql, mongodb, cassandra, couchbase</li>
+								<li>option: kafka, elasticsearch, websocket</li>
+								<li>microservices: eureka, consul, uaa, oauth2</li>
+								<br/>
+								<li>lot of options: more than 20000 different configs</li>
+								<li>if you think about entities, it will be more / more</li>
+							</ul>
+						</small>
+					</section>
+					<section>
+						<h3><img height="144px" data-src="./images/daily.png" alt="">&nbsp;Daily builds at Hipster-Labs</h3>
+						<ul>
+						<li>Docker</li>
+						<li>Maven</li>
+						<li>Gradle</li>
+						<li>Microservices</li>
+						<li>React</li>
+						<li>Last version of Node</li>
+						</ul>
+					</section>
+					<section data-markdown>
+						## Tips for contributor
 
-					hipster-labs
-					- Docker
-					- Maven
-					- Gradle
-					- Microservices
-					- React
-					- Last version of Node
-				</section>
-				<section data-markdown>
-					## Tips for contributor
-
-					As contributor, you can have your own Travis builds, just connect your GitHub account to Travis
-					The workflow:
-					- work on your fork
-					- push in a branch to your work
-					- a build will be triggered in your Travis
-					- if everything passed, you can pull request
+						As contributor, you can have your own Travis builds, just connect your GitHub account to Travis
+						The workflow:
+						- work on your fork
+						- push in a branch to your work
+						- a build will be triggered in your Travis
+						- if everything passed, you can pull request
+					</section>
 				</section>
 				<section>
 					<a>
@@ -193,6 +197,7 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				history: true,
 				transition: 'convex',
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
