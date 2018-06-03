@@ -67,37 +67,46 @@
 					</ul>
 				</section>
 				<section>
-					<h2>Travis</h2>
+					<a>
+						<img height="144px" data-src="./images/Travis-CI.png" alt="">
+					</a>
 					<ul>
 						<li>Travis is free for Open Source</li>
-						<li>Each push will trigger: 15 builds</li>
+						<li>Each push will trigger 15 builds</li>
 						<li>More than 12200 builds since 2013 just for generator-jhipster</li>
 					</ul>
 				</section>
-				<section data-markdown>
-					## What do we need to test ?
-
-					- the generator him self
-					- the installation of tools: node, yarn, java, git, etc.
-					- the generated application
-						- backend tests
-						- frontend tests
-						- e2e tests
+				<section>
+					<h3>What do we need to test ?</h3>
+					<ul>
+						<li>the generator him self</li>
+						<li>the installation of tools:<br/>
+							<img height="64px" data-src="./images/nodejs.png" alt=""><img height="64px" data-src="./images/java.jpg" alt=""><img height="64px" data-src="./images/yarn.jpg" alt=""><img height="48px" data-src="./images/git.png" alt=""></li>
+						<li>the generated application</li>
+						<ul>
+							<li>backend tests</li>
+							<li>frontend tests</li>
+							<li>end-to-end tests</li>
+						</ul>
+					</ul>
 				</section>
-				<section data-markdown>
-					## Hard to test everything
-
-					- front: angular / react
-					- back: maven / gradle
-					- security: jwt, oauth2, session
-					- css: sass
-					- cache: no l2,
-					- database: mysql, mariadb postgresql, mongodb, cassandra, couchbase
-					- option: kafka, elasticsearch, websocket
-					- microservices: eureka, consul, uaa, oauth2
-
-					- lot of options: more than 20000 different configs
-					- if you think about entities, it will be more / more
+				<section>
+					<h4>Hard to test everything</h4>
+					<small>
+						<ul>
+							<li>front: angular / react</li>
+							<li>back: maven / gradle</li>
+							<li>security: jwt, oauth2, session</li>
+							<li>css: sass</li>
+							<li>cache: no l2</li>
+							<li>database: mysql, mariadb postgresql, mongodb, cassandra, couchbase</li>
+							<li>option: kafka, elasticsearch, websocket</li>
+							<li>microservices: eureka, consul, uaa, oauth2</li>
+							<br/>
+							<li>lot of options: more than 20000 different configs</li>
+							<li>if you think about entities, it will be more / more</li>
+						</ul>
+					</small>
 				</section>
 				<section data-markdown>
 					## Daily builds
@@ -108,30 +117,36 @@
 					- Gradle
 					- Microservices
 					- React
+					- Last version of Node
 				</section>
 				<section data-markdown>
 					## Tips for contributor
 
-					As contributor, you can have your own Travis builds
+					As contributor, you can have your own Travis builds, just connect your GitHub account to Travis
 					The workflow:
 					- work on your fork
 					- push in a branch to your work
-					- a Travis builds will be trigger in your Travis
+					- a build will be triggered in your Travis
 					- if everything passed, you can pull request
 				</section>
-				<section data-markdown>
-					## SonarCloud
-
-					There is a Sonar analyze on SonarCloud, including Typescript
+				<section>
+					<a>
+						<img height="100px" data-src="./images/sonarcloud.png" alt="">
+					</a>
+					<a>
+						<img height="500px" data-src="./images/sonarcloud-analyze.png" alt="">
+					</a>
 				</section>
-				<section data-markdown>
-					## Docker Hub
-
-					A new Docker image is generated: jhipster/jhipster
-					- master
-					- latest
-					- vX.X.X
-					Other Docker images
+				<section>
+					<h2><img height="140px" data-src="./images/docker-hub.png" alt="">Docker Hub</h2>
+					<p>A new Docker image is generated: jhipster/jhipster
+						<ul>
+							<li>master</li>
+							<li>latest</li>
+							<li>vX.X.X</li>
+							<li>Other Docker images</li>
+						</ul>
+					</p>
 				</section>
 				<section data-markdown>
 					## Resume
