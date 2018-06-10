@@ -1,293 +1,319 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>JHipster Conf</title>
-		<meta name="description" content="JHipster Conf">
-		<meta name="author" content="Pascal Grimaud">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
+    <title>JHipster Conf</title>
+    <meta name="description" content="JHipster Conf">
+    <meta name="author" content="Pascal Grimaud">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<p>
-						<img height="144px" data-src="./images/banner.png" alt="">
-					</p>
-					<h1>DevOps with JHipster</h1>
-					<h3>Continuous Integration and Delivery</h3>
-				</section>
-				<section>
-					<h2>Pascal GRIMAUD</h2>
-					<p>Java Consultant</p>
-					<p>
-						<a href="https://www.ippon.fr" target"_blank" title="ippon">
-							<img height="144px" data-src="./images/logo_HD_300dpi_black-2141.png" alt="">
-						</a>
-					</p>
-					<p>Open Source Developer</p>
-					<p>
-						<a href="https://twitter.com/pascalgrimaud" target="_blank" title="twitter">
-							<img height="48px" data-src="./images/twitter.jpg" alt=""> @pascalgrimaud
-						</a>
-						<br/>
-						<a href="https://github.com/pascalgrimaud/" target="_blank" title="github">
-							<img height="48px" data-src="./images/github.png" alt=""> github.com/pascalgrimaud
-						</a>
-					</p>
-				</section>
-				<section>
-					<h1>Summary</h1>
-					<img data-src="./images/devops.png" alt="">
-					<ul>
-						<li class="fragment">Part 1: JHipster Continuous Integration</li>
-						<li class="fragment">Part 2: How JHipster can help DevOps team ?</li>
-					</ul>
-				</section>
-				<section>
-					<h1>Part 1</h1>
-					<h2>JHipster Continuous Integration</h2>
-					<ul>
-						<li>What do we use ?</li>
-						<li>What happens when someone summits a PR ?</li>
-						<li>What happens when it's merged into master ?</li>
-					</ul>
-				</section>
-				<section>
-					<section>
-						<h2>
-							<img height="100px" data-src="./images/logo-jhipster-small2x.png" alt="">JHipster Organization
-							<br/>on<img height="100px" data-src="./images/github-logo.png" alt="">
-						</h2>
-						<ul>
-                            <li>more than 50 projects</li>
-                            <li><img data-src="./images/top-languages.png" alt=""></li>
-						</ul>
-					</section>
-					<section>
-						<h2>
-							<img height="100px" data-src="./images/logo-jhipster-small2x.png" alt="">JHipster Organization
-						</h2>
-						<ul>Main projects:
-							<li>generator-jhipster</li>
-                            <li>jhipster.github.io</li>
-                            <li>jdl-studio</li>
-						</ul>
-					</section>
-                    <section>
-                        <h2>
-                            <img height="100px" data-src="./images/logo-jhipster-small2x.png" alt="">JHipster Organization
-                        </h2>
-                        <ul>Libraries:
-                            <li>ng-jhipster</li>
-                            <li>react-jhipster</li>
-                            <li>jhipster-core</li>
-                            <li>jhipster (lib)</li>
-                            <li>jhipster-uml</li>
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <p>
+                    <img height="144px" data-src="./images/banner.png" alt="">
+                </p>
+                <h1>DevOps with JHipster</h1>
+                <h3>Continuous Integration and Delivery</h3>
+            </section>
+            <section>
+                <h2>Pascal GRIMAUD</h2>
+                <p>Java Consultant</p>
+                <p>
+                    <a href="https://www.ippon.fr" target "_blank" title="ippon">
+                        <img height="144px" data-src="./images/logo_HD_300dpi_black-2141.png" alt="">
+                    </a>
+                </p>
+                <p>Open Source Developer</p>
+                <p>
+                    <a href="https://twitter.com/pascalgrimaud" target="_blank" title="twitter">
+                        <img height="48px" data-src="./images/twitter.jpg" alt=""> @pascalgrimaud
+                    </a>
+                    <br/>
+                    <a href="https://github.com/pascalgrimaud/" target="_blank" title="github">
+                        <img height="48px" data-src="./images/github.png" alt=""> github.com/pascalgrimaud
+                    </a>
+                </p>
+            </section>
+            <section>
+                <h1>Summary</h1>
+                <img data-src="./images/devops.png" alt="">
+                <ul>
+                    <li class="fragment">Part 1: JHipster Continuous Integration</li>
+                    <li class="fragment">Part 2: How JHipster can help DevOps team ?</li>
+                </ul>
+            </section>
+            <section>
+                <h1>Part 1</h1>
+                <h2>JHipster Continuous Integration</h2>
+            </section>
+            <section>
+                <section>
+                    <h2>
+                        <img height="100px" data-src="./images/logo-jhipster-small2x.png" alt="">JHipster Organization
+                        <br/>on
+                        <img height="100px" data-src="./images/github-logo.png" alt="">
+                    </h2>
+                    <ul>
+                        <li>more than 50 projects</li>
+                        <li>
+                            <img data-src="./images/top-languages.png" alt="">
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>
+                        <img height="100px" data-src="./images/logo-jhipster-small2x.png" alt="">JHipster Organization
+                    </h2>
+                    <ul>Main projects:
+                        <li>generator-jhipster</li>
+                        <li>jhipster.github.io</li>
+                        <li>jdl-studio</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>
+                        <img height="100px" data-src="./images/logo-jhipster-small2x.png" alt="">JHipster Organization
+                    </h2>
+                    <ul>Libraries:
+                        <li>ng-jhipster</li>
+                        <li>react-jhipster</li>
+                        <li>jhipster-core</li>
+                        <li>jhipster (lib)</li>
+                        <li>jhipster-uml</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>
+                        <img height="100px" data-src="./images/logo-jhipster-small2x.png" alt="">JHipster Organization
+                    </h2>
+                    <ul>Applications / samples:
+                        <li>jhipster-registry</li>
+                        <li>jhipster-online</li>
+                        <li>jhipster-sample-app-X</li>
+                        <li>jdl-samples</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>
+                        <img height="100px" data-src="./images/logo-jhipster-small2x.png" alt="">JHipster Organization
+                    </h2>
+                    <p>
+                        <span>Tools:</span>
+                    </p>
+                    <p>
+                        <ul>
+                            <li>jhipster-console</li>
+                            <li>jhipster-devbox</li>
+                            <li>jhipster-ide</li>
+                            <li>chocolatey-package</li>
+                            <li>jhipster-oh-my-zsh-plugin</li>
+                            <li>jhipster-fisherman-plugin</li>
                         </ul>
-                    </section>
-					<section>
-                        <h2>
-                            <img height="100px" data-src="./images/logo-jhipster-small2x.png" alt="">JHipster Organization
-                        </h2>
-                        <ul>Applications / samples:
-                            <li>jhipster-registry</li>
-                            <li>jhipster-online</li>
-                            <li>jhipster-sample-app-X</li>
-                            <li>jdl-samples</li>
-                        </ul>
-                    </section>
-					<section>
-                        <h2>
-                            <img height="100px" data-src="./images/logo-jhipster-small2x.png" alt="">JHipster Organization
-                        </h2>
-                        <p>
-                            <span>Tools:</span>
-                        </p>
-                        <p>
-                            <ul>
-                                <li>jhipster-console</li>
-                                <li>jhipster-devbox</li>
-                                <li>jhipster-ide</li>
-                                <li>chocolatey-package</li>
-                                <li>jhipster-oh-my-zsh-plugin</li>
-                                <li>jhipster-fisherman-plugin</li>
-                            </ul>
                         </span>
-                        </p>
-					</section>
-				</section>
-				<section>
-					<section>
-						<a>
-							<img height="100px" data-src="./images/Travis-CI.png" alt="">
-						</a>
-						<ul>
-							<li>Travis is free for Open Source</li>
-							<li>Each push will trigger 15 builds</li>
-							<li>More than 12200 builds since 2013</li>
-						</ul>
-					</section>
-					<section>
-						<a>
-							<img height="100px" data-src="./images/Travis-CI.png" alt="">
-						</a>
-						<a>
-							<img height="500px" data-src="./images/jhipster-travis.png" alt="">
-						</a>
-					</section>
-					<section>
-						<h3>What do we need to test ?</h3>
-						<ul>
-							<li>the generator him self</li>
-							<li>the installation of tools:<br/>
-								<img height="64px" data-src="./images/nodejs.png" alt=""><img height="64px" data-src="./images/java.jpg" alt=""><img height="64px" data-src="./images/yarn.jpg" alt=""><img height="48px" data-src="./images/git.png" alt=""></li>
-							<li>the generated application</li>
-							<ul>
-								<li>backend tests</li>
-								<li>frontend tests</li>
-								<li>end-to-end tests</li>
-							</ul>
-						</ul>
-					</section>
-					<section>
-						<h3>Hard to test everything</h3>
-						<small>
-							<ul>
-								<li>front: Angular / React</li>
-								<li>back: maven / gradle</li>
-								<li>security: jwt, oauth2, session</li>
-								<li>css: sass</li>
-								<li>cache: no l2</li>
-								<li>database: mysql, mariadb postgresql, mongodb, cassandra, couchbase</li>
-								<li>option: kafka, elasticsearch, websocket</li>
-								<li>microservices: eureka, consul, uaa, oauth2</li>
-								<br/>
-								<li>lot of options: more than 20000 different configs</li>
-								<li>if you add entities, it will be more configuration</li>
-							</ul>
-						</small>
-					</section>
-					<section>
-						<h3><img height="64px" data-src="./images/daily.png" alt="">&nbsp;Daily builds at Hipster-Labs</h3>
-						<p><img height="500px" data-src="./images/jhipster-daily-builds.png" alt=""></p>
-					</section>
-					<section>
-						<h3><img height="100px" data-src="./images/tips.svg" alt="">&nbsp;Tips for contributors</h3>
-						<p>Link your GitHub account to Travis CI&nbsp;<img height="140px" data-src="./images/github-travisci.png" alt=""></p>
-						<ul>
-							<li>work on your fork</li>
-							<li>push in a branch of your fork</li>
-							<li>a build will be triggered in your Travis</li>
-							<li>if everything passed, you can pull request</li>
-						</ul>
-					</p>
-					</section>
-				</section>
-				<section>
-					<a>
-						<img height="100px" data-src="./images/sonarcloud.png" alt="">
-					</a>
-					<a>
-						<img height="500px" data-src="./images/sonarcloud-analyze.png" alt="">
-					</a>
-				</section>
-				<section>
-					<h2>
-						<img height="100px" data-src="./images/docker-hub.png" alt="">Docker Hub
-					</h2>
-					<p>
-						<img height="500px" data-src="./images/jhipster-docker-hub.png" alt="">
-					</p>
-				</section>
-				<section data-markdown>
-					## Resume
+                    </p>
+                </section>
+                <section>
+                    <h2>Continuous Integration</h2>
+                    <ul>
+                        <li>What do we use ?</li>
+                        <li>What happens when someone summits a PR ?</li>
+                        <li>What happens when it's merged into master ?</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <a>
+                        <img height="100px" data-src="./images/Travis-CI.png" alt="">
+                    </a>
+                    <p>For generator-jhipster:</p>
+                    <p>
+                        <ul>
+                            <li>Travis is free for Open Source</li>
+                            <li>Each push will trigger 15 builds</li>
+                            <li>More than 12200 builds since 2013</li>
+                        </ul>
+                    </p>
+                </section>
+                <section>
+                    <a>
+                        <img height="100px" data-src="./images/Travis-CI.png" alt="">
+                    </a>
+                    <a>
+                        <img height="500px" data-src="./images/jhipster-travis.png" alt="">
+                    </a>
+                </section>
+                <section>
+                    <h3>What do we need to test ?</h3>
+                    <ul>
+                        <li>the generator him self</li>
+                        <li>the installation of tools:
+                            <br/>
+                            <img height="64px" data-src="./images/nodejs.png" alt="">
+                            <img height="64px" data-src="./images/java.jpg" alt="">
+                            <img height="64px" data-src="./images/yarn.jpg" alt="">
+                            <img height="48px" data-src="./images/git.png" alt="">
+                        </li>
+                        <li>the generated application</li>
+                        <ul>
+                            <li>backend tests</li>
+                            <li>frontend tests</li>
+                            <li>end-to-end tests</li>
+                        </ul>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Hard to test everything</h3>
+                    <small>
+                        <ul>
+                            <li>front: Angular / React</li>
+                            <li>back: maven / gradle</li>
+                            <li>security: jwt, oauth2, session</li>
+                            <li>css: sass</li>
+                            <li>cache: no l2</li>
+                            <li>database: mysql, mariadb postgresql, mongodb, cassandra, couchbase</li>
+                            <li>option: kafka, elasticsearch, websocket</li>
+                            <li>microservices: eureka, consul, uaa, oauth2</li>
+                            <br/>
+                            <li>lot of options: more than 20000 different configs</li>
+                            <li>if you add entities, it will be more configuration</li>
+                        </ul>
+                    </small>
+                </section>
+                <section>
+                    <h3>
+                        <img height="64px" data-src="./images/daily.png" alt="">&nbsp;Daily builds at Hipster-Labs</h3>
+                    <p>
+                        <img height="500px" data-src="./images/jhipster-daily-builds.png" alt="">
+                    </p>
+                </section>
+                <section>
+                    <h3>
+                        <img height="100px" data-src="./images/tips.svg" alt="">&nbsp;Tips for contributors</h3>
+                    <p>Link your GitHub account to Travis CI&nbsp;
+                        <img height="140px" data-src="./images/github-travisci.png"
+                            alt="">
+                    </p>
+                    <ul>
+                        <li>work on your fork</li>
+                        <li>push in a branch of your fork</li>
+                        <li>a build will be triggered in your Travis</li>
+                        <li>if everything passed, you can pull request</li>
+                    </ul>
+                    </p>
+                </section>
+            </section>
+            <section>
+                <a>
+                    <img height="100px" data-src="./images/sonarcloud.png" alt="">
+                </a>
+                <a>
+                    <img height="500px" data-src="./images/sonarcloud-analyze.png" alt="">
+                </a>
+            </section>
+            <section>
+                <h2>
+                    <img height="100px" data-src="./images/docker-hub.png" alt="">Docker Hub
+                </h2>
+                <p>
+                    <img height="500px" data-src="./images/jhipster-docker-hub.png" alt="">
+                </p>
+            </section>
+            <section data-markdown>
+                ## Resume Schema
+            </section>
+            <section>
+                <section>
+                    <h1>Road Map</h1>
+                    <a>
+                        <img height="400px" data-src="./images/roadmap.png" alt="">
+                    </a>
+                </section>
+                <section>
+                    <h2>Use other free CI</h2>
+                    <img height="100px" data-src="./images/circleci.png" alt=""> to increase the number of builds
+                    <img height="60px" data-src="./images/appveyor.png" alt=""> to test JHipster with Windows
+                </section>
+                <section>
 
-					Schema
-				</section>
-				<section>
-					<section>
-						<h1>Road Map</h1>
-						<a>
-							<img height="400px" data-src="./images/roadmap.png" alt="">
-						</a>
-					</section>
-					<section>
-						<h2>Use other free CI</h2>
-						<img height="100px" data-src="./images/circleci.png" alt=""> to increase the number of builds
-						<img height="60px" data-src="./images/appveyor.png" alt=""> to test JHipster with Windows
-					</section>
-					<section>
-						
-						<h2>SonarCloud organization</h2>
-						<h2><img height="140px" data-src="./images/sonarcloud-logo.jpg" alt=""></h2>
-						<ul>
-							<li>Migrate to Organization</li>
-							<li>Add more applications</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Other tests</h2>
-						<img height="100px" data-src="./images/gatling-logo.png" alt=""><br/>
-						<img height="140px" data-src="./images/docker-compose.png" alt="">
-						<img height="140px" data-src="./images/kubernetes.png" alt="">
-					</section>
-					<section>
-						<h2>About releases ?</h2>
-						<p class="fragment">
-							<img height="140px" data-src="./images/jdubois.jpeg" alt=""><br/>
-						</p>
-						<ul class="fragment">Manually:
-							<li>Release notes</li>
-							<li>Tweet</li>
-						</ul>
-					</section>
-					<section>
-						<h2>About releases ?</h2>
-						<ul>Automate:
-							<li>Tag</li>
-							<li>Push to NPM</li>
-							<li>Generation of all jhipster-sample-app-X</li>
-							<li>DevBox</li>
-						</ul>
-					</section>
-				</section>
-			</div>
-		</div>
+                    <h2>SonarCloud organization</h2>
+                    <h2>
+                        <img height="140px" data-src="./images/sonarcloud-logo.jpg" alt="">
+                    </h2>
+                    <ul>
+                        <li>Migrate to Organization</li>
+                        <li>Add more applications</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Other tests</h2>
+                    <img height="100px" data-src="./images/gatling-logo.png" alt="">
+                    <br/>
+                    <img height="140px" data-src="./images/docker-compose.png" alt="">
+                    <img height="140px" data-src="./images/kubernetes.png" alt="">
+                </section>
+                <section>
+                    <h2>About releases ?</h2>
+                    <p class="fragment">
+                        <img height="140px" data-src="./images/jdubois.jpeg" alt="">
+                        <br/>
+                    </p>
+                    <ul class="fragment">Manually:
+                        <li>Release notes</li>
+                        <li>Tweet</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>About releases ?</h2>
+                    <ul>Automate:
+                        <li>Tag</li>
+                        <li>Push to NPM</li>
+                        <li>Generation of all jhipster-sample-app-X</li>
+                        <li>DevBox</li>
+                    </ul>
+                </section>
+            </section>
+        </div>
+    </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				history: true,
-				transition: 'convex',
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            history: true,
+            transition: 'convex',
+            dependencies: [
+                { src: 'plugin/markdown/marked.js' },
+                { src: 'plugin/markdown/markdown.js' },
+                { src: 'plugin/notes/notes.js', async: true },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+            ]
+        });
+    </script>
+</body>
+
 </html>
