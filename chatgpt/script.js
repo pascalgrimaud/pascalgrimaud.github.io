@@ -39,7 +39,7 @@ function gererTouches(event) {
       clearRowHighlight();
       break;
     case 13: // Entrée
-      clearRowHighlight();
+      tableau.rows[selectedRow].classList.add("highlight");
       break;
   }
 
