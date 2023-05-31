@@ -3,6 +3,17 @@ var tableau = document.getElementById("tableauDonnees");
 var selectedRow = 1;
 var selectedCol = 1;
 
+// Tableau de prénoms
+var prenoms = ["Alice", "Bob", "Charlie", "David", "Emma", "Frank", "Grace", "Henry", "Isabella", "Jack"];
+
+// Générer des prénoms aléatoires pour le tableau
+for (var i = 1; i < tableau.rows.length; i++) {
+  for (var j = 0; j < tableau.rows[i].cells.length; j++) {
+    var randomIndex = Math.floor(Math.random() * prenoms.length);
+    tableau.rows[i].cells[j].textContent = prenoms[randomIndex];
+  }
+}
+
 // Fonction pour mettre à jour la sélection et surligner la cellule correspondante
 function updateSelection() {
   // Réinitialiser la classe "highlight" pour toutes les cellules
